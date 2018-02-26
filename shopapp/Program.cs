@@ -18,6 +18,10 @@ namespace shopapp
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
+            List<Customer> customerList = new List<Customer>();
+            customerList.Add(new Customer { Name = "John Connor", Age = 14, Sex = true, Status = 3 });
+            customerList.Add(new Customer { Name = "Sarah Connor", Age = 36, Sex = false, Status = 2 });
+            customerList.Add(new Customer { Name = "T-800", Age = 100, Sex = true, Status = 0 });
         }
     }
 }
