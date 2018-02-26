@@ -17,30 +17,49 @@ namespace shopapp
             InitializeComponent();
         }
 
+        public EditCustomerForm(Customer customer) : this()
+        {
+            LoadCustomer(customer);
+        }
+
+        private void LoadCustomer(Customer customer)
+        {
+            this.CustomerId = customer.Id;
+            this.CustomerName = customer.Name;
+            this.CustomerSex = customer.Sex;
+            this.CustomerAge = customer.Age;
+            this.CustomerStatus = customer.Status;
+
+        }
 
         public int CustomerId
         {
             get { return Int32.Parse(this.idtextBox.Text); }
+            set { this.idtextBox.Text = value.ToString(); }
         }
 
         public string CustomerName
         {
             get { return this.nameTextBox.Text; }
+            set { this.nameTextBox.Text = value.ToString(); }
         }
 
         public bool CustomerSex
         {
             get { return this.sexCheckBox.Checked; }
+            set { this.sexCheckBox.Checked = value; }
         }
 
         public int CustomerAge
         {
             get { return Int32.Parse(this.ageTextBox.Text); }
+            set { this.ageTextBox.Text = value.ToString(); }
         }
 
         public int CustomerStatus
         {
             get { return Int32.Parse(this.statusTextBox.Text); }
+            set { this.statusTextBox.Text = value.ToString(); }
         }
 
 

@@ -11,6 +11,8 @@ namespace shopapp.model
         private List<Customer> customerList;
 
         public ShopAppModel(){
+            
+            // fake read from file
             customerList = new List<Customer>();
             customerList.Add(new Customer(0, "John Connor", true, 14, 3));
             customerList.Add(new Customer(1, "Sarah Connor", false, 36, 2));
@@ -26,6 +28,11 @@ namespace shopapp.model
 
         public void addCustomer(Customer c) {
             customerList.Add(c);
+        }
+
+        public void EditCustomer(Customer customer, int index)
+        {
+            customerList[index] = customer;
         }
 
 

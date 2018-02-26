@@ -15,7 +15,8 @@ namespace shopapp
     {
         private ShopAppPresenter presenter;
 
-        private List<Customer> customerList;
+        private List<Customer> CustomerList;
+        private Customer CurrentCustomer;
 
         public MainForm()
         {
@@ -29,27 +30,7 @@ namespace shopapp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {   
-            if (tabControl1.SelectedIndex == 0)
-            {
-                EditCustomerForm editCustomerForm = new EditCustomerForm();
-                if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
-                {
-                    Customer c = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex,
-                        editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
-                    presenter.onAddCustomer(c);
-
-                }
-                else
-                {
-                    System.Console.WriteLine("CANCEL");
-                }
-            }
-            
-            
-            
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -68,9 +49,9 @@ namespace shopapp
 
         public void refreshInfo (List<Customer> list)
         {
-            this.customerList = list;
+            this.CustomerList = list;
             customersListBox.Items.Clear();
-            foreach (Customer c in this.customerList)
+            foreach (Customer c in this.CustomerList)
             {
                 this.customersListBox.Items.Add(c.Name);
             }
@@ -85,14 +66,66 @@ namespace shopapp
             this.statusTextBox.Text = customer.Status.ToString();
         }
 
+       
+
+
+        #region Button Handlers
+
+        /// ------------------------------------------------------------------- ///
+        /// -------------------- BUTTON HANDLERS ------------------------------ ///
+        /// ------------------------------------------------------------------- ///
+
+
+        private void newButton_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                EditCustomerForm editCustomerForm = new EditCustomerForm();
+                if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    Customer c = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex,
+                        editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
+                    presenter.onAddCustomer(c);
+
+                }
+                else
+                {
+                    System.Console.WriteLine("CANCEL");
+                }
+            }
+
+
+
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0 && this.CurrentCustomer != null) {
+                EditCustomerForm editCustomerForm = new EditCustomerForm(this.CurrentCustomer);
+                if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    Customer customer = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex,
+                        editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
+                    int CurrentIndex = customersListBox.SelectedIndex;
+                    presenter.OnEditCustomer(customer, CurrentIndex);
+                    showCustomer(customer);
+
+                }
+
+            }
+
+        }
+
         private void customersListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = customersListBox.SelectedIndex;
-            if ( index > -1)
+            if (index > -1)
             {
-                presenter.OnCustomerSelected(this.customerList[index]);               
-
+                this.CurrentCustomer = this.CustomerList[index];
+                presenter.OnCustomerSelected(this.CurrentCustomer);
             }
         }
+
+        #endregion
     }
 }

@@ -40,5 +40,11 @@ namespace shopapp.presenter
             model.addCustomer(c);
             mainform.refreshInfo(model.getCustomerList());
         }
+
+        public void OnEditCustomer(Customer customer, int index)
+        {
+            model.EditCustomer(customer, index);
+            mainform.refreshInfo(model.getCustomerList());
+        }
     }
 }

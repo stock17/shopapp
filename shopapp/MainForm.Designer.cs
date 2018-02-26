@@ -249,6 +249,7 @@ namespace shopapp
             this.editButton.TabIndex = 1;
             this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // newButton
             // 
@@ -258,7 +259,7 @@ namespace shopapp
             this.newButton.TabIndex = 0;
             this.newButton.Text = "New";
             this.newButton.UseVisualStyleBackColor = true;
-            this.newButton.Click += new System.EventHandler(this.button1_Click);
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // reportButton
             // 
