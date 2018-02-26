@@ -32,14 +32,14 @@ namespace shopapp
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
             this.customerIdLabel = new System.Windows.Forms.Label();
             this.customersListBox = new System.Windows.Forms.ListBox();
-            this.statusBox = new System.Windows.Forms.TextBox();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.statusLabel = new System.Windows.Forms.Label();
             this.ageTextBox = new System.Windows.Forms.TextBox();
             this.ageLabel = new System.Windows.Forms.Label();
-            this.sexBox = new System.Windows.Forms.TextBox();
+            this.sexTextBox = new System.Windows.Forms.TextBox();
             this.sexLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -70,14 +70,14 @@ namespace shopapp
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.IdTextBox);
             this.tabPage1.Controls.Add(this.customerIdLabel);
             this.tabPage1.Controls.Add(this.customersListBox);
-            this.tabPage1.Controls.Add(this.statusBox);
+            this.tabPage1.Controls.Add(this.statusTextBox);
             this.tabPage1.Controls.Add(this.statusLabel);
             this.tabPage1.Controls.Add(this.ageTextBox);
             this.tabPage1.Controls.Add(this.ageLabel);
-            this.tabPage1.Controls.Add(this.sexBox);
+            this.tabPage1.Controls.Add(this.sexTextBox);
             this.tabPage1.Controls.Add(this.sexLabel);
             this.tabPage1.Controls.Add(this.nameTextBox);
             this.tabPage1.Controls.Add(this.nameLabel);
@@ -89,15 +89,15 @@ namespace shopapp
             this.tabPage1.Text = "Customers";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // IdTextBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(94, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.IdTextBox.Enabled = false;
+            this.IdTextBox.Location = new System.Drawing.Point(94, 30);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.ReadOnly = true;
+            this.IdTextBox.Size = new System.Drawing.Size(175, 20);
+            this.IdTextBox.TabIndex = 10;
+            this.IdTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // customerIdLabel
             // 
@@ -116,15 +116,16 @@ namespace shopapp
             this.customersListBox.Name = "customersListBox";
             this.customersListBox.Size = new System.Drawing.Size(178, 160);
             this.customersListBox.TabIndex = 8;
+            this.customersListBox.SelectedIndexChanged += new System.EventHandler(this.customersListBox_SelectedIndexChanged);
             // 
-            // statusBox
+            // statusTextBox
             // 
-            this.statusBox.Enabled = false;
-            this.statusBox.Location = new System.Drawing.Point(94, 168);
-            this.statusBox.Name = "statusBox";
-            this.statusBox.ReadOnly = true;
-            this.statusBox.Size = new System.Drawing.Size(175, 20);
-            this.statusBox.TabIndex = 7;
+            this.statusTextBox.Enabled = false;
+            this.statusTextBox.Location = new System.Drawing.Point(94, 168);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.ReadOnly = true;
+            this.statusTextBox.Size = new System.Drawing.Size(175, 20);
+            this.statusTextBox.TabIndex = 7;
             // 
             // statusLabel
             // 
@@ -154,14 +155,14 @@ namespace shopapp
             this.ageLabel.Text = "Age";
             this.ageLabel.Click += new System.EventHandler(this.label3_Click);
             // 
-            // sexBox
+            // sexTextBox
             // 
-            this.sexBox.Enabled = false;
-            this.sexBox.Location = new System.Drawing.Point(94, 100);
-            this.sexBox.Name = "sexBox";
-            this.sexBox.ReadOnly = true;
-            this.sexBox.Size = new System.Drawing.Size(175, 20);
-            this.sexBox.TabIndex = 3;
+            this.sexTextBox.Enabled = false;
+            this.sexTextBox.Location = new System.Drawing.Point(94, 100);
+            this.sexTextBox.Name = "sexTextBox";
+            this.sexTextBox.ReadOnly = true;
+            this.sexTextBox.Size = new System.Drawing.Size(175, 20);
+            this.sexTextBox.TabIndex = 3;
             // 
             // sexLabel
             // 
@@ -268,7 +269,7 @@ namespace shopapp
             this.reportButton.Text = "Make report";
             this.reportButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -276,7 +277,7 @@ namespace shopapp
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
@@ -299,16 +300,16 @@ namespace shopapp
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button reportButton;
-        private System.Windows.Forms.TextBox statusBox;
+        private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.Label ageLabel;
-        private System.Windows.Forms.TextBox sexBox;
+        private System.Windows.Forms.TextBox sexTextBox;
         private System.Windows.Forms.Label sexLabel;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.ListBox customersListBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.Label customerIdLabel;
 
 

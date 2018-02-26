@@ -15,6 +15,8 @@ namespace shopapp
     {
         private ShopAppPresenter presenter;
 
+        private List<Customer> customerList;
+
         public MainForm()
         {
             InitializeComponent();
@@ -28,19 +30,23 @@ namespace shopapp
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {            
-            EditCustomerForm editCustomerForm = new EditCustomerForm();
-            if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
+        {   
+            if (tabControl1.SelectedIndex == 0)
             {
-                Customer c = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex, 
-                    editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
+                EditCustomerForm editCustomerForm = new EditCustomerForm();
+                if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    Customer c = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex,
+                        editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
+                    presenter.onAddCustomer(c);
 
-                presenter.onAddCustomer(c);
-                
+                }
+                else
+                {
+                    System.Console.WriteLine("CANCEL");
+                }
             }
-            else {
-                System.Console.WriteLine("CANCEL");
-            }
+            
             
             
         }
@@ -62,13 +68,31 @@ namespace shopapp
 
         public void refreshInfo (List<Customer> list)
         {
+            this.customerList = list;
             customersListBox.Items.Clear();
-
-            foreach (Customer c in list)
+            foreach (Customer c in this.customerList)
             {
                 this.customersListBox.Items.Add(c.Name);
             }
+        }
 
+        public void showCustomer(Customer customer)
+        {
+            this.IdTextBox.Text = customer.Id.ToString();
+            this.nameTextBox.Text = customer.Name;
+            this.sexTextBox.Text = customer.Sex ? "Male" : "Female";
+            this.ageTextBox.Text = customer.Age.ToString();
+            this.statusTextBox.Text = customer.Status.ToString();
+        }
+
+        private void customersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = customersListBox.SelectedIndex;
+            if ( index > -1)
+            {
+                presenter.OnCustomerSelected(this.customerList[index]);               
+
+            }
         }
     }
 }

@@ -15,7 +15,8 @@ namespace shopapp.presenter
 
         public interface IMainForm
         {
-            void refreshInfo(List<Customer> list);            
+            void refreshInfo(List<Customer> list);
+            void showCustomer(Customer customer);
         }
 
         public ShopAppPresenter(IMainForm mainform)
@@ -27,6 +28,11 @@ namespace shopapp.presenter
         public void onStart()
         {               
             mainform.refreshInfo(model.getCustomerList());
+        }
+
+        public void OnCustomerSelected(Customer customer)
+        {
+            mainform.showCustomer(customer);
         }
 
         public void onAddCustomer (Customer c)
