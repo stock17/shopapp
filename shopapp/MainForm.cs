@@ -83,19 +83,12 @@ namespace shopapp
                 EditCustomerForm editCustomerForm = new EditCustomerForm();
                 if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    Customer c = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex,
+                    Customer c = new Customer(editCustomerForm.CustomerName, editCustomerForm.CustomerSex,
                         editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
                     presenter.onAddCustomer(c);
-
-                }
-                else
-                {
-                    System.Console.WriteLine("CANCEL");
-                }
+                    showCustomer(c);
+                }               
             }
-
-
-
         }
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -104,11 +97,14 @@ namespace shopapp
                 EditCustomerForm editCustomerForm = new EditCustomerForm(this.CurrentCustomer);
                 if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    Customer customer = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex,
-                        editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
+                    CurrentCustomer.Name = editCustomerForm.CustomerName;
+                    CurrentCustomer.Sex = editCustomerForm.CustomerSex;
+                    CurrentCustomer.Age = editCustomerForm.CustomerAge;
+                    CurrentCustomer.Status = editCustomerForm.CustomerStatus;
+                    
                     int CurrentIndex = customersListBox.SelectedIndex;
-                    presenter.OnEditCustomer(customer, CurrentIndex);
-                    showCustomer(customer);
+                    presenter.OnEditCustomer(CurrentCustomer, CurrentIndex);
+                    showCustomer(CurrentCustomer);
 
                 }
 

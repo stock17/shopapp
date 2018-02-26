@@ -101,6 +101,7 @@
             // 
             // idtextBox
             // 
+            this.idtextBox.Enabled = false;
             this.idtextBox.Location = new System.Drawing.Point(94, 26);
             this.idtextBox.Name = "idtextBox";
             this.idtextBox.Size = new System.Drawing.Size(175, 20);

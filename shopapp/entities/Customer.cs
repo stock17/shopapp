@@ -9,9 +9,13 @@ namespace shopapp
     public class Customer
     {
 
-        public Customer(int id, string name, bool sex, int age, int status)
+        private static int NextId;
+
+        
+
+        public Customer(string name, bool sex, int age, int status)
         {
-            this.id = id;
+            this.id = Customer.NextId++;
             this.name = name;
             this.sex = sex;
             this.age = age;
