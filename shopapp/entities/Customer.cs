@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace shopapp
 {
+    [DataContract]
     public class Customer
     {
 
-        private static int NextId;
-
-        
+        private static int NextId;        
 
         public Customer(string name, bool sex, int age, int status)
         {
@@ -22,12 +22,14 @@ namespace shopapp
             this.status = status;
         }
 
+        [DataMember]
         private int id;
         public int Id
         {
             get { return id; }
         }
 
+        [DataMember]
         private int age;
         public int Age
         {
@@ -35,6 +37,7 @@ namespace shopapp
             get { return age; }
         }
 
+        [DataMember]
         private bool sex;
         public bool Sex
         {
@@ -42,6 +45,7 @@ namespace shopapp
             get { return sex; }
         }
 
+        [DataMember]
         private string name;
         public string Name
         {
@@ -49,6 +53,7 @@ namespace shopapp
             get { return name; }
         }
 
+        [DataMember]
         private int status;
         public int Status
         {
