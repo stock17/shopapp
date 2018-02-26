@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shopapp.presenter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,15 @@ using System.Windows.Forms;
 
 namespace shopapp
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form, ShopAppPresenter.IMainForm
     {
-        public Form1()
+        private ShopAppPresenter presenter;
+
+        public MainForm()
         {
             InitializeComponent();
+            presenter = new ShopAppPresenter(this);
+            presenter.onStart();
         }
 
         private void Form1_Load(object sender, EventArgs e)
