@@ -16,5 +16,39 @@ namespace shopapp
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            EditCustomerForm editCustomerForm = new EditCustomerForm();
+            if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
+            {
+                System.Console.WriteLine("OK");
+            }
+            else {
+                System.Console.WriteLine("NO OK");
+            }
+            
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
