@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace shopapp
 {
-    class Customer
+    public class Customer
     {
+
+        public Customer(int id, string name, bool sex, int age, int status)
+        {
+            this.id = id;
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+            this.status = status;
+        }
+
+        private int id;
+        public int Id
+        {
+            get { return id; }
+        }
+
         private int age;
         public int Age
         {
@@ -25,7 +41,7 @@ namespace shopapp
         private string name;
         public string Name
         {
-            set { Name = value; }
+            set { name = value; }
             get { return name; }
         }
 

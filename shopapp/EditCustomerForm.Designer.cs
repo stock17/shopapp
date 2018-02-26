@@ -129,25 +129,26 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(18, 221);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 23;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(193, 220);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 24;
             this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             // 
-            // EditCustomer
+            // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +165,7 @@
             this.Controls.Add(this.sexLabel);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.nameLabel);
-            this.Name = "EditCustomer";
+            this.Name = "EditCustomerForm";
             this.Text = "NewCustomer";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,4 +1,6 @@
-﻿namespace shopapp
+﻿using System.Collections.Generic;
+
+namespace shopapp
 {
     partial class Form1
     {
@@ -30,6 +32,17 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.customerIdLabel = new System.Windows.Forms.Label();
+            this.customersListBox = new System.Windows.Forms.ListBox();
+            this.statusBox = new System.Windows.Forms.TextBox();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.ageTextBox = new System.Windows.Forms.TextBox();
+            this.ageLabel = new System.Windows.Forms.Label();
+            this.sexBox = new System.Windows.Forms.TextBox();
+            this.sexLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -38,17 +51,6 @@
             this.editButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.sexLabel = new System.Windows.Forms.Label();
-            this.sexBox = new System.Windows.Forms.TextBox();
-            this.ageTextBox = new System.Windows.Forms.TextBox();
-            this.ageLabel = new System.Windows.Forms.Label();
-            this.statusBox = new System.Windows.Forms.TextBox();
-            this.statusLabel = new System.Windows.Forms.Label();
-            this.customersListBox = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.customerIdLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -86,6 +88,107 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Customers";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(94, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(175, 20);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // customerIdLabel
+            // 
+            this.customerIdLabel.AutoSize = true;
+            this.customerIdLabel.Location = new System.Drawing.Point(15, 30);
+            this.customerIdLabel.Name = "customerIdLabel";
+            this.customerIdLabel.Size = new System.Drawing.Size(18, 13);
+            this.customerIdLabel.TabIndex = 9;
+            this.customerIdLabel.Text = "ID";
+            this.customerIdLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // customersListBox
+            // 
+            this.customersListBox.FormattingEnabled = true;
+            this.customersListBox.Location = new System.Drawing.Point(329, 30);
+            this.customersListBox.Name = "customersListBox";
+            this.customersListBox.Size = new System.Drawing.Size(178, 160);
+            this.customersListBox.TabIndex = 8;
+            // 
+            // statusBox
+            // 
+            this.statusBox.Enabled = false;
+            this.statusBox.Location = new System.Drawing.Point(94, 168);
+            this.statusBox.Name = "statusBox";
+            this.statusBox.ReadOnly = true;
+            this.statusBox.Size = new System.Drawing.Size(175, 20);
+            this.statusBox.TabIndex = 7;
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(15, 168);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(67, 13);
+            this.statusLabel.TabIndex = 6;
+            this.statusLabel.Text = "Social status";
+            // 
+            // ageTextBox
+            // 
+            this.ageTextBox.Enabled = false;
+            this.ageTextBox.Location = new System.Drawing.Point(94, 134);
+            this.ageTextBox.Name = "ageTextBox";
+            this.ageTextBox.ReadOnly = true;
+            this.ageTextBox.Size = new System.Drawing.Size(175, 20);
+            this.ageTextBox.TabIndex = 5;
+            // 
+            // ageLabel
+            // 
+            this.ageLabel.AutoSize = true;
+            this.ageLabel.Location = new System.Drawing.Point(15, 134);
+            this.ageLabel.Name = "ageLabel";
+            this.ageLabel.Size = new System.Drawing.Size(26, 13);
+            this.ageLabel.TabIndex = 4;
+            this.ageLabel.Text = "Age";
+            this.ageLabel.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // sexBox
+            // 
+            this.sexBox.Enabled = false;
+            this.sexBox.Location = new System.Drawing.Point(94, 100);
+            this.sexBox.Name = "sexBox";
+            this.sexBox.ReadOnly = true;
+            this.sexBox.Size = new System.Drawing.Size(175, 20);
+            this.sexBox.TabIndex = 3;
+            // 
+            // sexLabel
+            // 
+            this.sexLabel.AutoSize = true;
+            this.sexLabel.Location = new System.Drawing.Point(15, 103);
+            this.sexLabel.Name = "sexLabel";
+            this.sexLabel.Size = new System.Drawing.Size(25, 13);
+            this.sexLabel.TabIndex = 2;
+            this.sexLabel.Text = "Sex";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Enabled = false;
+            this.nameTextBox.Location = new System.Drawing.Point(94, 68);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.ReadOnly = true;
+            this.nameTextBox.Size = new System.Drawing.Size(175, 20);
+            this.nameTextBox.TabIndex = 1;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(15, 71);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.TabIndex = 0;
+            this.nameLabel.Text = "Name";
             // 
             // tabPage2
             // 
@@ -165,107 +268,6 @@
             this.reportButton.Text = "Make report";
             this.reportButton.UseVisualStyleBackColor = true;
             // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(15, 71);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(35, 13);
-            this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Name";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Enabled = false;
-            this.nameTextBox.Location = new System.Drawing.Point(94, 68);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.ReadOnly = true;
-            this.nameTextBox.Size = new System.Drawing.Size(175, 20);
-            this.nameTextBox.TabIndex = 1;
-            // 
-            // sexLabel
-            // 
-            this.sexLabel.AutoSize = true;
-            this.sexLabel.Location = new System.Drawing.Point(15, 103);
-            this.sexLabel.Name = "sexLabel";
-            this.sexLabel.Size = new System.Drawing.Size(25, 13);
-            this.sexLabel.TabIndex = 2;
-            this.sexLabel.Text = "Sex";
-            // 
-            // sexBox
-            // 
-            this.sexBox.Enabled = false;
-            this.sexBox.Location = new System.Drawing.Point(94, 100);
-            this.sexBox.Name = "sexBox";
-            this.sexBox.ReadOnly = true;
-            this.sexBox.Size = new System.Drawing.Size(175, 20);
-            this.sexBox.TabIndex = 3;
-            // 
-            // ageTextBox
-            // 
-            this.ageTextBox.Enabled = false;
-            this.ageTextBox.Location = new System.Drawing.Point(94, 134);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.ReadOnly = true;
-            this.ageTextBox.Size = new System.Drawing.Size(175, 20);
-            this.ageTextBox.TabIndex = 5;
-            // 
-            // ageLabel
-            // 
-            this.ageLabel.AutoSize = true;
-            this.ageLabel.Location = new System.Drawing.Point(15, 134);
-            this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(26, 13);
-            this.ageLabel.TabIndex = 4;
-            this.ageLabel.Text = "Age";
-            this.ageLabel.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // statusBox
-            // 
-            this.statusBox.Enabled = false;
-            this.statusBox.Location = new System.Drawing.Point(94, 168);
-            this.statusBox.Name = "statusBox";
-            this.statusBox.ReadOnly = true;
-            this.statusBox.Size = new System.Drawing.Size(175, 20);
-            this.statusBox.TabIndex = 7;
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(15, 168);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(67, 13);
-            this.statusLabel.TabIndex = 6;
-            this.statusLabel.Text = "Social status";
-            // 
-            // customersListBox
-            // 
-            this.customersListBox.FormattingEnabled = true;
-            this.customersListBox.Location = new System.Drawing.Point(329, 30);
-            this.customersListBox.Name = "customersListBox";
-            this.customersListBox.Size = new System.Drawing.Size(178, 160);
-            this.customersListBox.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(94, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // customerIdLabel
-            // 
-            this.customerIdLabel.AutoSize = true;
-            this.customerIdLabel.Location = new System.Drawing.Point(15, 30);
-            this.customerIdLabel.Name = "customerIdLabel";
-            this.customerIdLabel.Size = new System.Drawing.Size(18, 13);
-            this.customerIdLabel.TabIndex = 9;
-            this.customerIdLabel.Text = "ID";
-            this.customerIdLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,6 +310,9 @@
         private System.Windows.Forms.ListBox customersListBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label customerIdLabel;
+
+
+       
     }
 }
 

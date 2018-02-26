@@ -50,5 +50,14 @@ namespace shopapp
         {
 
         }
+
+        public void refreshInfo (List<Customer> list)
+        {
+            foreach (Customer c in list)
+            {
+                this.customersListBox.Items.Add(c);
+            }
+
+        }
     }
 }
