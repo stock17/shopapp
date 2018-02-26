@@ -32,7 +32,11 @@ namespace shopapp
             EditCustomerForm editCustomerForm = new EditCustomerForm();
             if (editCustomerForm.ShowDialog(this) == DialogResult.OK)
             {
-                System.Console.WriteLine("OK");
+                Customer c = new Customer(editCustomerForm.CustomerId, editCustomerForm.CustomerName, editCustomerForm.CustomerSex, 
+                    editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
+
+                presenter.onAddCustomer(c);
+                
             }
             else {
                 System.Console.WriteLine("CANCEL");
@@ -58,9 +62,11 @@ namespace shopapp
 
         public void refreshInfo (List<Customer> list)
         {
+            customersListBox.Items.Clear();
+
             foreach (Customer c in list)
             {
-                this.customersListBox.Items.Add(c);
+                this.customersListBox.Items.Add(c.Name);
             }
 
         }

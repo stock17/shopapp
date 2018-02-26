@@ -28,27 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.statusBox = new System.Windows.Forms.TextBox();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.statusLabel = new System.Windows.Forms.Label();
             this.ageTextBox = new System.Windows.Forms.TextBox();
             this.ageLabel = new System.Windows.Forms.Label();
-            this.sexBox = new System.Windows.Forms.TextBox();
             this.sexLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.idtextBox = new System.Windows.Forms.TextBox();
             this.customerIdLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.sexCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // statusBox
+            // statusTextBox
             // 
-            this.statusBox.Location = new System.Drawing.Point(94, 152);
-            this.statusBox.Name = "statusBox";
-            this.statusBox.ReadOnly = true;
-            this.statusBox.Size = new System.Drawing.Size(175, 20);
-            this.statusBox.TabIndex = 18;
+            this.statusTextBox.Location = new System.Drawing.Point(94, 152);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(175, 20);
+            this.statusTextBox.TabIndex = 18;
             // 
             // statusLabel
             // 
@@ -63,7 +62,6 @@
             // 
             this.ageTextBox.Location = new System.Drawing.Point(94, 118);
             this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.ReadOnly = true;
             this.ageTextBox.Size = new System.Drawing.Size(175, 20);
             this.ageTextBox.TabIndex = 16;
             // 
@@ -75,14 +73,6 @@
             this.ageLabel.Size = new System.Drawing.Size(26, 13);
             this.ageLabel.TabIndex = 15;
             this.ageLabel.Text = "Age";
-            // 
-            // sexBox
-            // 
-            this.sexBox.Location = new System.Drawing.Point(94, 84);
-            this.sexBox.Name = "sexBox";
-            this.sexBox.ReadOnly = true;
-            this.sexBox.Size = new System.Drawing.Size(175, 20);
-            this.sexBox.TabIndex = 14;
             // 
             // sexLabel
             // 
@@ -97,7 +87,6 @@
             // 
             this.nameTextBox.Location = new System.Drawing.Point(94, 52);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.ReadOnly = true;
             this.nameTextBox.Size = new System.Drawing.Size(175, 20);
             this.nameTextBox.TabIndex = 12;
             // 
@@ -110,13 +99,12 @@
             this.nameLabel.TabIndex = 11;
             this.nameLabel.Text = "Name";
             // 
-            // textBox1
+            // idtextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 22;
+            this.idtextBox.Location = new System.Drawing.Point(94, 26);
+            this.idtextBox.Name = "idtextBox";
+            this.idtextBox.Size = new System.Drawing.Size(175, 20);
+            this.idtextBox.TabIndex = 22;
             // 
             // customerIdLabel
             // 
@@ -148,20 +136,30 @@
             this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // sexCheckBox
+            // 
+            this.sexCheckBox.AutoSize = true;
+            this.sexCheckBox.Location = new System.Drawing.Point(94, 82);
+            this.sexCheckBox.Name = "sexCheckBox";
+            this.sexCheckBox.Size = new System.Drawing.Size(49, 17);
+            this.sexCheckBox.TabIndex = 25;
+            this.sexCheckBox.Text = "Male";
+            this.sexCheckBox.UseVisualStyleBackColor = true;
+            // 
             // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.sexCheckBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.idtextBox);
             this.Controls.Add(this.customerIdLabel);
-            this.Controls.Add(this.statusBox);
+            this.Controls.Add(this.statusTextBox);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.ageTextBox);
             this.Controls.Add(this.ageLabel);
-            this.Controls.Add(this.sexBox);
             this.Controls.Add(this.sexLabel);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.nameLabel);
@@ -173,17 +171,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox statusBox;
+        private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.Label ageLabel;
-        private System.Windows.Forms.TextBox sexBox;
         private System.Windows.Forms.Label sexLabel;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox idtextBox;
         private System.Windows.Forms.Label customerIdLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox sexCheckBox;
     }
 }

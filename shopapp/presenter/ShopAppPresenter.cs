@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shopapp.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,28 +9,30 @@ namespace shopapp.presenter
 {
     class ShopAppPresenter
     {
-        private IMainForm mainform;
+        private ShopAppModel model;
+
+        private IMainForm mainform;        
 
         public interface IMainForm
         {
-            void refreshInfo(List<Customer> list);
+            void refreshInfo(List<Customer> list);            
         }
 
         public ShopAppPresenter(IMainForm mainform)
         {
             this.mainform = mainform;
+            this.model = new ShopAppModel();
         }
 
         public void onStart()
+        {               
+            mainform.refreshInfo(model.getCustomerList());
+        }
+
+        public void onAddCustomer (Customer c)
         {
-            // fake request to database
-            List<Customer> customerList = new List<Customer>();
-            customerList.Add(new Customer(0, "John Connor", true, 14, 3));
-            customerList.Add(new Customer(1, "Sarah Connor", false, 36, 2));
-            customerList.Add(new Customer(2, "T-800", true, 100, 0));
-
-
-            mainform.refreshInfo(customerList);
+            model.addCustomer(c);
+            mainform.refreshInfo(model.getCustomerList());
         }
     }
 }
