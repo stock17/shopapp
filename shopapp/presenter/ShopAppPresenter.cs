@@ -46,5 +46,11 @@ namespace shopapp.presenter
             model.EditCustomer(customer, index);
             mainform.refreshInfo(model.getCustomerList());
         }
+
+        public void OnRemoveCustomer(int index)
+        {
+            model.RemoveCustomer(index);
+            mainform.refreshInfo(model.getCustomerList());
+        }
     }
 }

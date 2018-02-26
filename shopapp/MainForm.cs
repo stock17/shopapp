@@ -116,6 +116,16 @@ namespace shopapp
 
         }
 
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0 && this.CurrentCustomer != null)
+            {                    
+                int CurrentIndex = customersListBox.SelectedIndex;                
+                presenter.OnRemoveCustomer(CurrentIndex);
+                CurrentCustomer = null;
+            }
+        }
+
         private void customersListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = customersListBox.SelectedIndex;
@@ -127,5 +137,7 @@ namespace shopapp
         }
 
         #endregion
+
+       
     }
 }

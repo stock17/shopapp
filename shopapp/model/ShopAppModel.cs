@@ -35,6 +35,11 @@ namespace shopapp.model
             customerList[index] = customer;
         }
 
+        public void RemoveCustomer(int index)
+        {
+            customerList.RemoveAt(index);
+        }
+
 
     }
 }
