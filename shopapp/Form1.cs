@@ -30,7 +30,7 @@ namespace shopapp
                 System.Console.WriteLine("OK");
             }
             else {
-                System.Console.WriteLine("NO OK");
+                System.Console.WriteLine("CANCEL");
             }
             
             
