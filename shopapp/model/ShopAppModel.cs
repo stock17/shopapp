@@ -19,7 +19,7 @@ namespace shopapp.model
             customerList.Add(new Customer("T-800", true, 100, 0));
 
             //testing
-            //new FileHelper().SaveToFile(customerList);
+            new FileHelper().SaveToFile(customerList);
             customerList = new FileHelper().LoadFromFile();
         }
 
@@ -43,7 +43,6 @@ namespace shopapp.model
         {
             customerList.RemoveAt(index);
         }
-
 
     }
 }

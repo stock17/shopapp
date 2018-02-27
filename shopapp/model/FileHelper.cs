@@ -32,7 +32,10 @@ namespace shopapp.model
                 FileStream stream = new FileStream(CUSTOMERFILE, FileMode.Open);
                 customerList = (List<Customer>) serializer.ReadObject(stream);
             }
-            return customerList;
+            if (customerList != null)
+                return customerList;
+            else
+                return new List<Customer>();
         }
     }
 }
