@@ -18,7 +18,9 @@ namespace shopapp.model
             customerList.Add(new Customer("Sarah Connor", false, 36, 2));
             customerList.Add(new Customer("T-800", true, 100, 0));
 
-            new FileHelper().SaveToFile(customerList);
+            //testing
+            //new FileHelper().SaveToFile(customerList);
+            customerList = new FileHelper().LoadFromFile();
         }
 
 

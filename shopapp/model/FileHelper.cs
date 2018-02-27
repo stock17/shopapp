@@ -10,27 +10,29 @@ namespace shopapp.model
 {
     class FileHelper
     {
-        private const string CUSTOMERFILE = "./customers.jsom";
+        private const string FILESDIRECTORY = "./files";
+        private const string CUSTOMERFILE = FILESDIRECTORY + "/customers.json";
 
-        public List<Customer> LoadCustomerData() {
-
-
-            return new List<Customer>();
-        }
-
+      
         public void SaveToFile(List<Customer> customers)
         {
-
-            DataContractJsonSerializer serializator = new DataContractJsonSerializer(typeof(Customer));
+            if (!Directory.Exists(FILESDIRECTORY))
+                Directory.CreateDirectory(FILESDIRECTORY);
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Customer>));
             FileStream stream = new FileStream(CUSTOMERFILE, FileMode.Create);
-
-            foreach(Customer customer in customers)
-            {
-                serializator.WriteObject(stream, customer);
-            }
-
+            serializer.WriteObject(stream, customers);
             stream.Close();
+        }
 
+        public List<Customer> LoadFromFile() {
+            List<Customer> customerList = null;
+            if (File.Exists(CUSTOMERFILE))
+            {
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Customer>));
+                FileStream stream = new FileStream(CUSTOMERFILE, FileMode.Open);
+                customerList = (List<Customer>) serializer.ReadObject(stream);
+            }
+            return customerList;
         }
     }
 }
