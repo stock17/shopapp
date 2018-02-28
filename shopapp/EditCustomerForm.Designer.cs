@@ -61,9 +61,11 @@
             // ageTextBox
             // 
             this.ageTextBox.Location = new System.Drawing.Point(94, 118);
+            this.ageTextBox.MaxLength = 3;
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(175, 20);
             this.ageTextBox.TabIndex = 16;
+            this.ageTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageTextBox_KeyPress);
             // 
             // ageLabel
             // 
@@ -89,6 +91,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(175, 20);
             this.nameTextBox.TabIndex = 12;
+            this.nameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextBox_KeyPress);
             // 
             // nameLabel
             // 

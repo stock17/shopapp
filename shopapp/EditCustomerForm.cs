@@ -65,8 +65,34 @@ namespace shopapp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // TODO check input info
-            
+
+            // check input info
+            if (nameTextBox.Text == "")
+            {
+                MessageBox.Show("Input your name");
+                DialogResult = DialogResult.None;
+                return;
+            }
+
+            string age = ageTextBox.Text;
+            if (ageTextBox.Text == "" || Int32.Parse(age) < 0 || Int32.Parse(age) > 120) {
+                MessageBox.Show("Incorrect age");
+                DialogResult = DialogResult.None;
+                return;
+            }
         }
+
+        // check name input
+        void nameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ('-'));
+        }
+
+        void ageTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        
     }
 }
