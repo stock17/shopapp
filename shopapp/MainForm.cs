@@ -63,7 +63,7 @@ namespace shopapp
             this.nameTextBox.Text = customer.Name;
             this.sexTextBox.Text = customer.Sex ? "Male" : "Female";
             this.ageTextBox.Text = customer.Age.ToString();
-            this.statusTextBox.Text = customer.Status.ToString();
+            this.statusTextBox.Text = ((Customer.SocialStatus) customer.Status).ToString();
         }
 
         private void EnableSave() {

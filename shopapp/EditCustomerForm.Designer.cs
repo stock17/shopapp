@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.statusLabel = new System.Windows.Forms.Label();
             this.ageTextBox = new System.Windows.Forms.TextBox();
             this.ageLabel = new System.Windows.Forms.Label();
@@ -40,14 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.sexCheckBox = new System.Windows.Forms.CheckBox();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // statusTextBox
-            // 
-            this.statusTextBox.Location = new System.Drawing.Point(94, 152);
-            this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(175, 20);
-            this.statusTextBox.TabIndex = 18;
             // 
             // statusLabel
             // 
@@ -150,17 +143,25 @@
             this.sexCheckBox.Text = "Male";
             this.sexCheckBox.UseVisualStyleBackColor = true;
             // 
+            // statusComboBox
+            // 
+            this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Location = new System.Drawing.Point(94, 152);
+            this.statusComboBox.Name = "statusComboBox";
+            this.statusComboBox.Size = new System.Drawing.Size(174, 21);
+            this.statusComboBox.TabIndex = 26;
+            // 
             // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.statusComboBox);
             this.Controls.Add(this.sexCheckBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.idtextBox);
             this.Controls.Add(this.customerIdLabel);
-            this.Controls.Add(this.statusTextBox);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.ageTextBox);
             this.Controls.Add(this.ageLabel);
@@ -175,7 +176,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.Label ageLabel;
@@ -187,5 +187,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox sexCheckBox;
+        private System.Windows.Forms.ComboBox statusComboBox;
     }
 }

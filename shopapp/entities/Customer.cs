@@ -61,5 +61,8 @@ namespace shopapp
             get { return status; }
         }
 
+        public enum SocialStatus { unemployed, employee, student, pensioner }
     }
+
+    
 }

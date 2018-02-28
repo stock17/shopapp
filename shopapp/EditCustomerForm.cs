@@ -15,6 +15,7 @@ namespace shopapp
         public EditCustomerForm()
         {
             InitializeComponent();
+            statusComboBox.DataSource = Enum.GetValues(typeof(Customer.SocialStatus));
         }
 
         public EditCustomerForm(Customer customer) : this()
@@ -58,8 +59,8 @@ namespace shopapp
 
         public int CustomerStatus
         {
-            get { return Int32.Parse(this.statusTextBox.Text); }
-            set { this.statusTextBox.Text = value.ToString(); }
+            get { return statusComboBox.SelectedIndex; }// Int32.Parse(this.statusComboBox.Text); }
+            set { this.statusComboBox.SelectedIndex = value; }
         }
 
 
