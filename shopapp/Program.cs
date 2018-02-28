@@ -16,16 +16,9 @@ namespace shopapp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainForm mainform = new MainForm();
+            MainForm mainform = new MainForm();            
 
-
-            
-
-            Application.Run(mainform);
-
-
-            
-
+            Application.Run(mainform);     
             
         }
     }

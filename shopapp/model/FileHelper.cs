@@ -10,11 +10,19 @@ namespace shopapp.model
 {
     class FileHelper
     {
-        private const string FILESDIRECTORY = "./files";
-        private const string CUSTOMERFILE = FILESDIRECTORY + "/customers.json";
+        private static FileHelper instance;
 
+        public static FileHelper GetInstance()
+        {
+            if (instance == null)
+                instance = new model.FileHelper();
+            return instance;
+        }
+
+        private const string FILESDIRECTORY = "./files";
+        private const string CUSTOMERFILE = FILESDIRECTORY + "/customers.json";        
       
-        public void SaveToFile(List<Customer> customers)
+        public void SaveCustomerToFile(List<Customer> customers)
         {
             if (!Directory.Exists(FILESDIRECTORY))
                 Directory.CreateDirectory(FILESDIRECTORY);

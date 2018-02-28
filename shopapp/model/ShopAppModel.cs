@@ -9,28 +9,23 @@ namespace shopapp.model
     class ShopAppModel
     {
         private List<Customer> customerList;
+        private FileHelper fileHelper;
 
-        public ShopAppModel(){
-            
-            // fake read from file
-            customerList = new List<Customer>();
-            customerList.Add(new Customer("John Connor", true, 14, 3));
-            customerList.Add(new Customer("Sarah Connor", false, 36, 2));
-            customerList.Add(new Customer("T-800", true, 100, 0));
-
-            //testing
-            new FileHelper().SaveToFile(customerList);
-            customerList = new FileHelper().LoadFromFile();
+        public ShopAppModel()
+        {
+           fileHelper = FileHelper.GetInstance();
+           customerList = fileHelper.LoadFromFile();
         }
 
 
         public List<Customer> getCustomerList()
-        {
+        {            
             return customerList;
         }
 
 
-        public void addCustomer(Customer c) {
+        public void addCustomer(Customer c)
+        {
             customerList.Add(c);
         }
 

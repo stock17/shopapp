@@ -26,7 +26,7 @@ namespace shopapp.presenter
         }
 
         public void onStart()
-        {               
+        {
             mainform.refreshInfo(model.getCustomerList());
         }
 
