@@ -14,7 +14,7 @@ namespace shopapp.model
         public ShopAppModel()
         {
            fileHelper = FileHelper.GetInstance();
-           customerList = fileHelper.LoadFromFile();
+           customerList = fileHelper.LoadCustomerFromFile();
         }
 
 
@@ -26,17 +26,21 @@ namespace shopapp.model
 
         public void addCustomer(Customer c)
         {
-            customerList.Add(c);
+            customerList.Add(c);            
         }
 
         public void EditCustomer(Customer customer, int index)
         {
-            customerList[index] = customer;
+            customerList[index] = customer;            
         }
 
         public void RemoveCustomer(int index)
         {
-            customerList.RemoveAt(index);
+            customerList.RemoveAt(index);            
+        }
+
+        public void SaveData() {
+            fileHelper.SaveCustomerToFile(customerList);
         }
 
     }

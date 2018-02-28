@@ -66,7 +66,16 @@ namespace shopapp
             this.statusTextBox.Text = customer.Status.ToString();
         }
 
-       
+        private void EnableSave() {
+            saveButton.Enabled = true;
+            saveButton.Image = shopapp.Properties.Resources.save_enabled;
+        }
+
+        private void DisableSave()
+        {
+            saveButton.Enabled = false;
+            saveButton.Image = shopapp.Properties.Resources.save_disabled;
+        }
 
 
         #region Button Handlers
@@ -87,6 +96,7 @@ namespace shopapp
                         editCustomerForm.CustomerAge, editCustomerForm.CustomerStatus);
                     presenter.onAddCustomer(c);
                     showCustomer(c);
+                    EnableSave();
                 }               
             }
         }
@@ -105,6 +115,7 @@ namespace shopapp
                     int CurrentIndex = customersListBox.SelectedIndex;
                     presenter.OnEditCustomer(CurrentCustomer, CurrentIndex);
                     showCustomer(CurrentCustomer);
+                    EnableSave();
 
                 }
 
@@ -119,6 +130,7 @@ namespace shopapp
                 int CurrentIndex = customersListBox.SelectedIndex;                
                 presenter.OnRemoveCustomer(CurrentIndex);
                 CurrentCustomer = null;
+                EnableSave();
             }
         }
 
@@ -132,8 +144,14 @@ namespace shopapp
             }
         }
 
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            presenter.onSave();
+            DisableSave();
+        }
+
         #endregion
 
-       
+
     }
 }

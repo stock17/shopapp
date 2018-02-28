@@ -51,6 +51,7 @@ namespace shopapp
             this.editButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,7 +63,7 @@ namespace shopapp
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 47);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(558, 265);
@@ -226,7 +227,7 @@ namespace shopapp
             this.groupBox1.Controls.Add(this.removeButton);
             this.groupBox1.Controls.Add(this.editButton);
             this.groupBox1.Controls.Add(this.newButton);
-            this.groupBox1.Location = new System.Drawing.Point(16, 283);
+            this.groupBox1.Location = new System.Drawing.Point(16, 318);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(425, 40);
             this.groupBox1.TabIndex = 1;
@@ -264,18 +265,35 @@ namespace shopapp
             // 
             // reportButton
             // 
-            this.reportButton.Location = new System.Drawing.Point(468, 294);
+            this.reportButton.Location = new System.Drawing.Point(468, 329);
             this.reportButton.Name = "reportButton";
             this.reportButton.Size = new System.Drawing.Size(97, 38);
             this.reportButton.TabIndex = 2;
             this.reportButton.Text = "Make report";
             this.reportButton.UseVisualStyleBackColor = true;
             // 
+            // saveButton
+            // 
+            this.saveButton.AutoEllipsis = true;
+            this.saveButton.BackColor = System.Drawing.SystemColors.Control;
+            this.saveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.saveButton.Enabled = false;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.saveButton.Image = global::shopapp.Properties.Resources.save_disabled;
+            this.saveButton.Location = new System.Drawing.Point(12, 1);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(37, 40);
+            this.saveButton.TabIndex = 3;
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 344);
+            this.ClientSize = new System.Drawing.Size(582, 375);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
@@ -313,9 +331,7 @@ namespace shopapp
         private System.Windows.Forms.ListBox customersListBox;
         private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.Label customerIdLabel;
-
-
-       
+        private System.Windows.Forms.Button saveButton;
     }
 }
 
