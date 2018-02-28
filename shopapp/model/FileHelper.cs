@@ -10,13 +10,13 @@ namespace shopapp.model
 {
     class FileHelper
     {
-        private static FileHelper instance;
+        public static FileHelper fileHelper;
 
-        public static FileHelper GetInstance()
+        public FileHelper getInstance()
         {
-            if (instance == null)
-                instance = new model.FileHelper();
-            return instance;
+            if (fileHelper == null)
+                fileHelper = new model.FileHelper();
+            return fileHelper;
         }
 
         private const string FILESDIRECTORY = "./files";
@@ -27,19 +27,18 @@ namespace shopapp.model
             if (!Directory.Exists(FILESDIRECTORY))
                 Directory.CreateDirectory(FILESDIRECTORY);
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Customer>));
-            FileStream stream = new FileStream(CUSTOMERFILE, FileMode.Create, FileAccess.Write);
+            FileStream stream = new FileStream(CUSTOMERFILE, FileMode.Create);
             serializer.WriteObject(stream, customers);
             stream.Close();
         }
 
-        public List<Customer> LoadCustomerFromFile() {
+        public List<Customer> LoadFromFile() {
             List<Customer> customerList = null;
             if (File.Exists(CUSTOMERFILE))
             {
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Customer>));
                 FileStream stream = new FileStream(CUSTOMERFILE, FileMode.Open);
                 customerList = (List<Customer>) serializer.ReadObject(stream);
-                stream.Close();
             }
             if (customerList != null)
                 return customerList;

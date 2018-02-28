@@ -97,7 +97,11 @@ namespace shopapp
                     presenter.onAddCustomer(c);
                     showCustomer(c);
                     EnableSave();
-                }               
+                }
+            }
+
+            else if (tabControl1.SelectedIndex == 1) {
+
             }
         }
 

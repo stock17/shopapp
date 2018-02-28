@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace shopapp.entities
 {
     [DataContract]
-    class Product
+    public class Product
     {
         public static int NextId;
 
@@ -20,13 +20,13 @@ namespace shopapp.entities
         }
 
         [DataMember]
-        int Id { get; set; }
+        public int Id { get; set; }
         [DataMember]
-        string Name { get; set; }
+        public string Name { get; set; }
         [DataMember]
-        decimal Price { get; set; }
+        public decimal Price { get; set; }
         [DataMember]
-        int Quantity { get; set; }
+        public int Quantity { get; set; }
 
     }
 }
