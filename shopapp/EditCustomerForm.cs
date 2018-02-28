@@ -16,6 +16,7 @@ namespace shopapp
         {
             InitializeComponent();
             statusComboBox.DataSource = Enum.GetValues(typeof(Customer.SocialStatus));
+            this.CustomerId = Customer.NextId;
         }
 
         public EditCustomerForm(Customer customer) : this()

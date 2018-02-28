@@ -11,7 +11,7 @@ namespace shopapp
     public class Customer
     {
 
-        private static int NextId;        
+        public static int NextId;        
 
         public Customer(string name, bool sex, int age, int status)
         {

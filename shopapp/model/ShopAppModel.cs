@@ -13,8 +13,12 @@ namespace shopapp.model
 
         public ShopAppModel()
         {
-           fileHelper = FileHelper.GetInstance();
-           customerList = fileHelper.LoadCustomerFromFile();
+            fileHelper = FileHelper.GetInstance();
+            customerList = fileHelper.LoadCustomerFromFile();
+            var MaxId = (from c in customerList select c.Id).Max();
+            //Console.WriteLine(MaxId);
+            Customer.NextId = ++MaxId;
+            
         }
 
 
