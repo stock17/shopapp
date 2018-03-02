@@ -165,6 +165,14 @@ namespace shopapp
                 CurrentCustomer = null;
                 EnableSave();
             }
+
+            else if (tabControl1.SelectedIndex == 1 && this.CurrentProduct != null)
+            {
+                int CurrentIndex = productsListBox.SelectedIndex;
+                presenter.OnRemoveProduct(CurrentIndex);
+                CurrentProduct = null;
+                EnableSave();
+            }
         }
 
         private void customersListBox_SelectedIndexChanged(object sender, EventArgs e)
