@@ -44,6 +44,15 @@ namespace shopapp
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.productIdTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.productsListBox = new System.Windows.Forms.ListBox();
+            this.productQuantityTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.productPriceTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.productNameTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,15 +61,6 @@ namespace shopapp
             this.newButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.productIdTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.productQuantityTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.productPriceTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.productNameTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -108,7 +108,6 @@ namespace shopapp
             this.IdTextBox.ReadOnly = true;
             this.IdTextBox.Size = new System.Drawing.Size(175, 20);
             this.IdTextBox.TabIndex = 10;
-            this.IdTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // customerIdLabel
             // 
@@ -118,7 +117,6 @@ namespace shopapp
             this.customerIdLabel.Size = new System.Drawing.Size(18, 13);
             this.customerIdLabel.TabIndex = 9;
             this.customerIdLabel.Text = "ID";
-            this.customerIdLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // customersListBox
             // 
@@ -164,7 +162,6 @@ namespace shopapp
             this.ageLabel.Size = new System.Drawing.Size(26, 13);
             this.ageLabel.TabIndex = 4;
             this.ageLabel.Text = "Age";
-            this.ageLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // sexTextBox
             // 
@@ -206,7 +203,7 @@ namespace shopapp
             // 
             this.tabPage2.Controls.Add(this.productIdTextBox);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.listBox1);
+            this.tabPage2.Controls.Add(this.productsListBox);
             this.tabPage2.Controls.Add(this.productQuantityTextBox);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.productPriceTextBox);
@@ -220,6 +217,87 @@ namespace shopapp
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Products";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // productIdTextBox
+            // 
+            this.productIdTextBox.Enabled = false;
+            this.productIdTextBox.Location = new System.Drawing.Point(108, 39);
+            this.productIdTextBox.Name = "productIdTextBox";
+            this.productIdTextBox.ReadOnly = true;
+            this.productIdTextBox.Size = new System.Drawing.Size(175, 20);
+            this.productIdTextBox.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "ID";
+            // 
+            // productsListBox
+            // 
+            this.productsListBox.FormattingEnabled = true;
+            this.productsListBox.Location = new System.Drawing.Point(343, 39);
+            this.productsListBox.Name = "productsListBox";
+            this.productsListBox.Size = new System.Drawing.Size(178, 160);
+            this.productsListBox.TabIndex = 19;
+            this.productsListBox.SelectedIndexChanged += new System.EventHandler(this.productsListBox_SelectedIndexChanged);
+            // 
+            // productQuantityTextBox
+            // 
+            this.productQuantityTextBox.Enabled = false;
+            this.productQuantityTextBox.Location = new System.Drawing.Point(108, 143);
+            this.productQuantityTextBox.Name = "productQuantityTextBox";
+            this.productQuantityTextBox.ReadOnly = true;
+            this.productQuantityTextBox.Size = new System.Drawing.Size(175, 20);
+            this.productQuantityTextBox.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Quantity";
+            // 
+            // productPriceTextBox
+            // 
+            this.productPriceTextBox.Enabled = false;
+            this.productPriceTextBox.Location = new System.Drawing.Point(108, 109);
+            this.productPriceTextBox.Name = "productPriceTextBox";
+            this.productPriceTextBox.ReadOnly = true;
+            this.productPriceTextBox.Size = new System.Drawing.Size(175, 20);
+            this.productPriceTextBox.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 112);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Price";
+            // 
+            // productNameTextBox
+            // 
+            this.productNameTextBox.Enabled = false;
+            this.productNameTextBox.Location = new System.Drawing.Point(108, 77);
+            this.productNameTextBox.Name = "productNameTextBox";
+            this.productNameTextBox.ReadOnly = true;
+            this.productNameTextBox.Size = new System.Drawing.Size(175, 20);
+            this.productNameTextBox.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 80);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Name";
             // 
             // tabPage3
             // 
@@ -307,86 +385,6 @@ namespace shopapp
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // productIdTextBox
-            // 
-            this.productIdTextBox.Enabled = false;
-            this.productIdTextBox.Location = new System.Drawing.Point(108, 39);
-            this.productIdTextBox.Name = "productIdTextBox";
-            this.productIdTextBox.ReadOnly = true;
-            this.productIdTextBox.Size = new System.Drawing.Size(175, 20);
-            this.productIdTextBox.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "ID";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(343, 39);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(178, 160);
-            this.listBox1.TabIndex = 19;
-            // 
-            // productQuantityTextBox
-            // 
-            this.productQuantityTextBox.Enabled = false;
-            this.productQuantityTextBox.Location = new System.Drawing.Point(108, 143);
-            this.productQuantityTextBox.Name = "productQuantityTextBox";
-            this.productQuantityTextBox.ReadOnly = true;
-            this.productQuantityTextBox.Size = new System.Drawing.Size(175, 20);
-            this.productQuantityTextBox.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Quantity";
-            // 
-            // productPriceTextBox
-            // 
-            this.productPriceTextBox.Enabled = false;
-            this.productPriceTextBox.Location = new System.Drawing.Point(108, 109);
-            this.productPriceTextBox.Name = "productPriceTextBox";
-            this.productPriceTextBox.ReadOnly = true;
-            this.productPriceTextBox.Size = new System.Drawing.Size(175, 20);
-            this.productPriceTextBox.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Price";
-            // 
-            // productNameTextBox
-            // 
-            this.productNameTextBox.Enabled = false;
-            this.productNameTextBox.Location = new System.Drawing.Point(108, 77);
-            this.productNameTextBox.Name = "productNameTextBox";
-            this.productNameTextBox.ReadOnly = true;
-            this.productNameTextBox.Size = new System.Drawing.Size(175, 20);
-            this.productNameTextBox.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Name";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,7 +433,7 @@ namespace shopapp
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.TextBox productIdTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox productsListBox;
         private System.Windows.Forms.TextBox productQuantityTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox productPriceTextBox;

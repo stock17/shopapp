@@ -43,6 +43,7 @@
             // nameTextBox
             // 
             this.nameTextBox.Location = new System.Drawing.Point(94, 52);
+            this.nameTextBox.MaxLength = 30;
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(175, 20);
             this.nameTextBox.TabIndex = 12;
@@ -107,19 +108,20 @@
             // priceTextBox
             // 
             this.priceTextBox.Location = new System.Drawing.Point(94, 80);
-            this.priceTextBox.MaxLength = 3;
+            this.priceTextBox.MaxLength = 10;
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(175, 20);
             this.priceTextBox.TabIndex = 16;
-            this.priceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageTextBox_KeyPress);
+            this.priceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceTextBox_KeyPress);
             // 
             // quantityTextBox
             // 
             this.quantityTextBox.Location = new System.Drawing.Point(94, 110);
-            this.quantityTextBox.MaxLength = 3;
+            this.quantityTextBox.MaxLength = 10;
             this.quantityTextBox.Name = "quantityTextBox";
             this.quantityTextBox.Size = new System.Drawing.Size(175, 20);
             this.quantityTextBox.TabIndex = 26;
+            this.quantityTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTextBox_KeyPress);
             // 
             // label1
             // 

@@ -1,4 +1,5 @@
-﻿using shopapp.presenter;
+﻿using shopapp.entities;
+using shopapp.presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,9 @@ namespace shopapp
         private List<Customer> CustomerList;
         private Customer CurrentCustomer;
 
+        private List<Product> ProductList;
+        private Product CurrentProduct;
+
         public MainForm()
         {
             InitializeComponent();
@@ -29,31 +33,22 @@ namespace shopapp
         {
 
         }
+               
 
-        
-
-        private void label3_Click(object sender, EventArgs e)
+        public void refreshInfo (List<Customer> customerList, List<Product> productList)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void refreshInfo (List<Customer> list)
-        {
-            this.CustomerList = list;
+            this.CustomerList = customerList;
             customersListBox.Items.Clear();
             foreach (Customer c in this.CustomerList)
             {
                 this.customersListBox.Items.Add(c.Name);
+            }
+
+            this.ProductList = productList;
+            productsListBox.Items.Clear();
+            foreach (Product p in this.ProductList)
+            {
+                this.productsListBox.Items.Add(p.Name);
             }
         }
 
@@ -64,6 +59,14 @@ namespace shopapp
             this.sexTextBox.Text = customer.Sex ? "Male" : "Female";
             this.ageTextBox.Text = customer.Age.ToString();
             this.statusTextBox.Text = ((Customer.SocialStatus) customer.Status).ToString();
+        }
+
+        public void showProduct(Product product)
+        {
+            this.productIdTextBox.Text = product.Id.ToString();
+            this.productNameTextBox.Text = product.Name;
+            this.productPriceTextBox.Text = (product.Price / 100).ToString();
+            this.productQuantityTextBox.Text = product.Quantity.ToString();            
         }
 
         private void EnableSave() {
@@ -100,8 +103,17 @@ namespace shopapp
                 }
             }
 
-            else if (tabControl1.SelectedIndex == 1) {
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                ProductForm productForm = new ProductForm();
+                if (productForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    Product p = new Product(productForm.ProdName, productForm.ProductPrice, productForm.ProductQuantity);
+                    presenter.onAddProduct(p);
+                    showProduct(p);
+                    EnableSave();
 
+                }
             }
         }
 
@@ -121,6 +133,23 @@ namespace shopapp
                     showCustomer(CurrentCustomer);
                     EnableSave();
 
+                }
+
+            }
+
+            else if (tabControl1.SelectedIndex == 1 && this.CurrentProduct != null)
+            {
+                ProductForm productForm = new ProductForm(this.CurrentProduct);
+                if (productForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    CurrentProduct.Name = productForm.ProdName;
+                    CurrentProduct.Price = productForm.ProductPrice;
+                    CurrentProduct.Quantity = productForm.ProductQuantity;
+                    
+                    int CurrentIndex = productsListBox.SelectedIndex;
+                    presenter.OnEditProduct(CurrentProduct, CurrentIndex);
+                    showProduct(CurrentProduct);
+                    EnableSave();
                 }
 
             }
@@ -145,6 +174,16 @@ namespace shopapp
             {
                 this.CurrentCustomer = this.CustomerList[index];
                 presenter.OnCustomerSelected(this.CurrentCustomer);
+            }
+        }
+
+        private void productsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = productsListBox.SelectedIndex;
+            if (index > -1)
+            {
+                this.CurrentProduct = this.ProductList[index];
+                presenter.OnProductSelected(this.CurrentProduct);
             }
         }
 

@@ -77,25 +77,42 @@ namespace shopapp
                 return;
             }
 
-            string age = ageTextBox.Text;
-            if (ageTextBox.Text == "" || Int32.Parse(age) < 0 || Int32.Parse(age) > 120) {
-                MessageBox.Show("Incorrect age");
+            string quantity = quantityTextBox.Text;
+            if (quantity == "" || Int32.Parse(quantity) < 0 || Int32.Parse(quantity) > int.MaxValue) {
+                MessageBox.Show("Incorrect quantity");
                 DialogResult = DialogResult.None;
                 return;
             }
+
+            string price = priceTextBox.Text;
+            bool PriceOK = Regex.IsMatch(price, "^\\d+(.\\d{1,2})?$");
+            if (!PriceOK) {
+                MessageBox.Show("Incorrect price");
+                DialogResult = DialogResult.None;
+                return;
+            }
+            
         }
 
         // check name input
         void nameTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ('-'));
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ('-') || char.IsDigit(e.KeyChar));
         }
 
-        void ageTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        //check quantity input
+        void quantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back );
         }
 
-        
+
+        //check price input
+        void priceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.');
+        }
+
+
     }
 }
