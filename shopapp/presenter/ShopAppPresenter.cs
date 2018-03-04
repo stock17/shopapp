@@ -18,7 +18,7 @@ namespace shopapp.presenter
         {
             void refreshInfo(List<Customer> customerList, List<Product> productList, List<Order> orderList);
             void showCustomer(Customer customer);
-            void showProduct(Product product);
+            void showProduct(Product product);            
         }
 
         public ShopAppPresenter(IMainForm mainform)

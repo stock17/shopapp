@@ -59,9 +59,11 @@ namespace shopapp
             this.newButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
+            this.ordersListBox = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -279,12 +281,13 @@ namespace shopapp
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.ordersListBox);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(550, 239);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Orders";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -363,6 +366,14 @@ namespace shopapp
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // ordersListBox
+            // 
+            this.ordersListBox.FormattingEnabled = true;
+            this.ordersListBox.Location = new System.Drawing.Point(31, 18);
+            this.ordersListBox.Name = "ordersListBox";
+            this.ordersListBox.Size = new System.Drawing.Size(489, 199);
+            this.ordersListBox.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,6 +391,7 @@ namespace shopapp
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -416,6 +428,7 @@ namespace shopapp
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox productNameTextBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox ordersListBox;
     }
 }
 

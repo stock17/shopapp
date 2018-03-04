@@ -13,13 +13,13 @@ namespace shopapp.entities
         private static int nextId;
         public static int NextId
         {
-            get { return nextId++; }
+            get { return nextId; }
             set { nextId = value; }
         }
 
         public Order(int customerId, int productListId, DateTime date)
         {
-            this.Id = NextId;
+            this.Id = nextId++;
             this.CustomerId = customerId;
             this.ProductListId = productListId;
             this.Date = date;

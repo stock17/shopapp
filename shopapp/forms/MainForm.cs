@@ -56,6 +56,18 @@ namespace shopapp
             }
 
             this.OrderList = orderList;
+            ordersListBox.Items.Clear();
+            foreach (Order o in this.OrderList)
+            {
+                var customers = from cust in customerList where cust.Id == o.CustomerId select cust as Customer;
+                foreach (Customer c in customers)
+                {
+                    this.ordersListBox.Items.Add(c.Name + "   " + o.Date.ToString() );
+                }
+                
+
+                
+            }
         }
 
         public void showCustomer(Customer customer)

@@ -15,7 +15,7 @@ namespace shopapp.entities
         public static int NextId
         {
             set {   nextId = value;   }
-            get {   return nextId++;  }
+            get {   return nextId;  }
         }
 
         [DataMember]
@@ -25,7 +25,7 @@ namespace shopapp.entities
 
         public OrderProductList (Dictionary<int, int> productList)
         {
-            this.Id = NextId;
+            this.Id = nextId++;
             this.productListDictionary = productList;
         }
         
