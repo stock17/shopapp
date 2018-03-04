@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace shopapp.entities
 {
-    class Order
+    [DataContract]
+    public class Order
     {
-        private int nextId;
-        public int NextId
+        private static int nextId;
+        public static int NextId
         {
             get { return nextId++; }
             set { nextId = value; }
@@ -23,9 +25,13 @@ namespace shopapp.entities
             this.Date = date;
         }
 
-        public int Id { get; }
+        [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public int CustomerId { set; get; }
+        [DataMember]
         public int ProductListId { set; get; }
+        [DataMember]
         public DateTime Date { set; get; }
     }
 }

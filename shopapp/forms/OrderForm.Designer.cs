@@ -35,7 +35,7 @@
             this.customerIdLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.productListOrderFormComboBox = new System.Windows.Forms.ComboBox();
             this.addProductOrderFormButton = new System.Windows.Forms.Button();
@@ -105,12 +105,12 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Date";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(94, 98);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(175, 20);
-            this.dateTimePicker1.TabIndex = 40;
+            this.dateTimePicker.Location = new System.Drawing.Point(94, 98);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(175, 20);
+            this.dateTimePicker.TabIndex = 40;
             // 
             // label2
             // 
@@ -157,7 +157,7 @@
             this.Controls.Add(this.addProductOrderFormButton);
             this.Controls.Add(this.productListOrderFormComboBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerListOrderFormComboBox);
             this.Controls.Add(this.button2);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Label customerIdLabel;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox productListOrderFormComboBox;
         private System.Windows.Forms.Button addProductOrderFormButton;

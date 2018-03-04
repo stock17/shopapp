@@ -11,7 +11,7 @@ namespace shopapp.model
     {
         private List<Customer> customerList;
         private List<Product> productList;
-        private List<OrderProductList> orderProductList;
+        private List<OrderProductList> orderProductLists;
         private List<Order> orderList;
 
         private FileHelper fileHelper;
@@ -19,33 +19,10 @@ namespace shopapp.model
         public ShopAppModel()
         {
             fileHelper = FileHelper.GetInstance();
-
-
-            customerList = fileHelper.LoadCustomerFromFile();            
-            if (customerList.Count > 0)
-            {
-                var MaxId = (from c in customerList select c.Id).Max();
-                Customer.NextId = ++MaxId;
-            }
-            else {
-                Customer.NextId = 0;
-            }
-
-
-            productList = fileHelper.LoadProductFromFile();
-            if (productList.Count > 0)
-            {
-                var MaxId = (from p in productList select p.Id).Max();
-                Product.NextId = ++MaxId;
-
-                Console.WriteLine("Product max id - " + MaxId);
-            }
-            else
-            {
-                Product.NextId = 0;
-            }
-
-            
+            LoadCustomers();
+            LoadProducts();
+            LoadOrderProductLists();
+            LoadOrders();
 
         }      
 
@@ -53,6 +30,8 @@ namespace shopapp.model
         {
             fileHelper.SaveCustomerToFile(customerList);
             fileHelper.SaveProductToFile(productList);
+            fileHelper.SaveOrderProductListsToFile(orderProductLists);
+            fileHelper.SaveOrdersToFile(orderList);
         }
 
         /***************************************************/
@@ -102,26 +81,26 @@ namespace shopapp.model
         }
 
         /***************************************************/
-        /*************  PRODUCT SECTION  *******************/
+        /*************  PRODUCT LIST SECTION  **************/
         /***************************************************/
         public List<OrderProductList> getOrderProductList()
         {
-            return orderProductList;
+            return orderProductLists;
         }
 
         public void AddOrderProductList(OrderProductList list)
         {
-            orderProductList.Add(list);
+            orderProductLists.Add(list);
         }
 
         public void EditOrderProductList(OrderProductList list, int index)
         {
-            orderProductList[index] = list;
+            orderProductLists[index] = list;
         }
 
         public void RemoveOrderProductList(int index)
         {
-            orderProductList.RemoveAt(index);
+            orderProductLists.RemoveAt(index);
         }
 
         /***************************************************/
@@ -146,5 +125,76 @@ namespace shopapp.model
         {
             orderList.RemoveAt(index);
         }
+
+
+        /***************************************************/
+        /*******************  LOADERS  *********************/
+        /***************************************************/
+
+
+        private void LoadCustomers() {
+            customerList = fileHelper.LoadCustomerFromFile();
+            if (customerList.Count > 0)
+            {
+                var MaxId = (from c in customerList select c.Id).Max();
+                Customer.NextId = ++MaxId;
+            }
+            else
+            {
+                Customer.NextId = 0;
+            }
+        }
+
+        private void LoadProducts() {
+            productList = fileHelper.LoadProductFromFile();
+            if (productList.Count > 0)
+            {
+                var MaxId = (from p in productList select p.Id).Max();
+                Product.NextId = ++MaxId;
+
+                Console.WriteLine("Product max id - " + MaxId);
+            }
+            else
+            {
+                Product.NextId = 0;
+            }
+        }
+
+        private void LoadOrderProductLists()
+        {
+            orderProductLists = fileHelper.LoadProductListsFromFile();
+
+            if (orderProductLists.Count > 0)
+            {
+                var MaxId = (from p in orderProductLists select p.Id).Max();
+                OrderProductList.NextId = ++MaxId;
+
+                Console.WriteLine("Product max id - " + MaxId);
+            }
+            else
+            {
+                OrderProductList.NextId = 0;
+            }
+        }
+
+        private void LoadOrders()
+        {
+            orderList = fileHelper.LoadOrdersFromFile();
+            if (orderList.Count > 0)
+            {
+                var MaxId = (from p in orderList select p.Id).Max();
+                Order.NextId = ++MaxId;
+
+                Console.WriteLine("Product max id - " + MaxId);
+            }
+            else
+            {
+                Order.NextId = 0;
+            }
+        }
+
+
+
+
     }
 }

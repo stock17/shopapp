@@ -23,6 +23,9 @@ namespace shopapp
         private List<Product> ProductList;
         private Product CurrentProduct;
 
+        private List<Order> OrderList;
+        private Order CurrentOrder;
+
         public MainForm()
         {
             InitializeComponent();
@@ -36,7 +39,7 @@ namespace shopapp
         }
                
 
-        public void refreshInfo (List<Customer> customerList, List<Product> productList)
+        public void refreshInfo (List<Customer> customerList, List<Product> productList, List<Order> orderList)
         {
             this.CustomerList = customerList;
             customersListBox.Items.Clear();
@@ -51,6 +54,8 @@ namespace shopapp
             {
                 this.productsListBox.Items.Add(p.Name);
             }
+
+            this.OrderList = orderList;
         }
 
         public void showCustomer(Customer customer)
@@ -121,10 +126,11 @@ namespace shopapp
                 OrderForm orderForm = new OrderForm(CustomerList, ProductList);
                 if (orderForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    //Product p = new Product(productForm.ProdName, productForm.ProductPrice, productForm.ProductQuantity);
-                    //presenter.onAddProduct(p);
-                    //showProduct(p);
-                    //EnableSave();
+                    OrderProductList list = new OrderProductList(orderForm.ProductListDictionary);
+                    int customerIndex = orderForm.CustomerIndex;
+                    Order order = new Order(CustomerList[customerIndex].Id, list.Id, orderForm.datePickerValue);
+                    presenter.onAddOrder(order, list);
+                    EnableSave();
 
                 }
             }

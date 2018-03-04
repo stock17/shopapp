@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace shopapp.entities
 {
-    class OrderProductList
+    [DataContract]
+    public class OrderProductList
     {
         private static int nextId;
 
@@ -16,7 +18,9 @@ namespace shopapp.entities
             get {   return nextId++;  }
         }
 
-        public int Id { get; }
+        [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public Dictionary<int, int> productListDictionary { set; get; }
 
         public OrderProductList (Dictionary<int, int> productList)

@@ -35,11 +35,13 @@ namespace shopapp.forms
         public Dictionary<int, int> ProductListDictionary;
         
                 
+        public int CustomerIndex {            
+            get { return customerListOrderFormComboBox.SelectedIndex; }
+        }        
 
-        public int OrderId { set; get; }
-        public Customer customer { set; get; }
-        public List<Product> ProductList { set; get; }
-        public DateTime date { set; get; }
+        public DateTime datePickerValue {            
+            get { return this.dateTimePicker.Value;  }
+        }
 
         
 
