@@ -25,6 +25,12 @@ namespace shopapp.entities
         public string Name { get; set; }
         [DataMember]
         public decimal Price { get; set; }
+
+        
+        public override string ToString()
+        {
+            return this.Name;
+        }
        
 
     }

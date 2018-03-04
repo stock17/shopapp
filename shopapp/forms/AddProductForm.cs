@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shopapp.entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,11 @@ namespace shopapp.forms
 {
     public partial class AddProductForm : Form
     {
-        public AddProductForm(string productName)
+        public AddProductForm(Product product)
         {
             InitializeComponent();
-            this.productNameAddProductFormTextBox.Text = productName;
+            this.productNameTextBox.Text = product.Name;
+            this.productPriceTextBox.Text = (product.Price / 100).ToString();
         }
 
         public int Quantity

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="entities\Customer.cs" />
     <Compile Include="entities\Product.cs" />
+    <Compile Include="entities\ProductList.cs" />
     <Compile Include="forms\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>

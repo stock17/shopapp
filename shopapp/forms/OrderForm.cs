@@ -21,33 +21,39 @@ namespace shopapp.forms
         {
             InitializeComponent();
 
-            orderProductList = productList;
+            ProductListDictionary = new Dictionary<int, int>();
+            OrderProductList = productList;          
+
 
             customerListOrderFormComboBox.DataSource = customerList.Select(info => info.Name).ToList();
-            productListOrderFormComboBox.DataSource = productList.Select(info => info.Name).ToList();
+            productListOrderFormComboBox.DataSource = productList;            
 
         }
 
         private int productIndex;
+        private List<Product> OrderProductList;
+        public Dictionary<int, int> ProductListDictionary;
+        
+                
 
         public int OrderId { set; get; }
-
         public Customer customer { set; get; }
-
         public List<Product> ProductList { set; get; }
-
         public DateTime date { set; get; }
 
-        private List<Product> orderProductList;
+        
 
         private void addProductOrderFormButton_Click(object sender, EventArgs e)
         {
-            AddProductForm addProductForm = new AddProductForm(productListOrderFormComboBox.Text);
+            Product product = OrderProductList[productIndex];
+
+            AddProductForm addProductForm = new AddProductForm(product);
             if (addProductForm.ShowDialog(this) == DialogResult.OK)
-            {
-                Product p = orderProductList[productIndex];
-                int q = addProductForm.Quantity;
-                this.produstListOrderFormListBox.Items.Add(p.Name + " " + q.ToString());
+            {                
+                int quantity = addProductForm.Quantity;
+                this.produstListOrderFormListBox.Items.Add(product.Name + " " + quantity.ToString() + " pc");
+
+                ProductListDictionary[product.Id] = quantity;
             }
         }
 

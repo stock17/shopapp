@@ -30,9 +30,10 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.productNameAddProductFormTextBox = new System.Windows.Forms.TextBox();
+            this.productNameTextBox = new System.Windows.Forms.TextBox();
             this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.productPriceTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button2
@@ -55,13 +56,13 @@
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // productNameAddProductFormTextBox
+            // productNameTextBox
             // 
-            this.productNameAddProductFormTextBox.Enabled = false;
-            this.productNameAddProductFormTextBox.Location = new System.Drawing.Point(18, 21);
-            this.productNameAddProductFormTextBox.Name = "productNameAddProductFormTextBox";
-            this.productNameAddProductFormTextBox.Size = new System.Drawing.Size(251, 20);
-            this.productNameAddProductFormTextBox.TabIndex = 34;
+            this.productNameTextBox.Enabled = false;
+            this.productNameTextBox.Location = new System.Drawing.Point(18, 21);
+            this.productNameTextBox.Name = "productNameTextBox";
+            this.productNameTextBox.Size = new System.Drawing.Size(192, 20);
+            this.productNameTextBox.TabIndex = 34;
             // 
             // quantityTextBox
             // 
@@ -79,14 +80,23 @@
             this.nameLabel.TabIndex = 27;
             this.nameLabel.Text = "Quantity";
             // 
+            // productPriceTextBox
+            // 
+            this.productPriceTextBox.Enabled = false;
+            this.productPriceTextBox.Location = new System.Drawing.Point(220, 21);
+            this.productPriceTextBox.Name = "productPriceTextBox";
+            this.productPriceTextBox.Size = new System.Drawing.Size(49, 20);
+            this.productPriceTextBox.TabIndex = 37;
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 113);
+            this.Controls.Add(this.productPriceTextBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.productNameAddProductFormTextBox);
+            this.Controls.Add(this.productNameTextBox);
             this.Controls.Add(this.quantityTextBox);
             this.Controls.Add(this.nameLabel);
             this.Name = "AddProductForm";
@@ -99,8 +109,9 @@
         #endregion
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox productNameAddProductFormTextBox;
+        private System.Windows.Forms.TextBox productNameTextBox;
         private System.Windows.Forms.TextBox quantityTextBox;
         private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox productPriceTextBox;
     }
 }
