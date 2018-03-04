@@ -87,7 +87,7 @@ namespace shopapp
         // check name input
         void nameTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ('-'));
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ' ' || e.KeyChar == ('-'));
         }
 
         void ageTextBox_KeyPress(object sender, KeyPressEventArgs e)

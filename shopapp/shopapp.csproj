@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="entities\Customer.cs" />
+    <Compile Include="entities\Order.cs" />
     <Compile Include="entities\Product.cs" />
     <Compile Include="entities\ProductList.cs" />
     <Compile Include="forms\AddProductForm.cs">
@@ -74,11 +75,11 @@
     <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\EditCustomerForm.cs">
+    <Compile Include="forms\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\EditCustomerForm.Designer.cs">
-      <DependentUpon>EditCustomerForm.cs</DependentUpon>
+    <Compile Include="forms\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="model\FileHelper.cs" />
     <Compile Include="model\ShopAppModel.cs" />
@@ -97,8 +98,8 @@
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\EditCustomerForm.resx">
-      <DependentUpon>EditCustomerForm.cs</DependentUpon>
+    <EmbeddedResource Include="forms\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
