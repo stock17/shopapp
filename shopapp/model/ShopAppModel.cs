@@ -11,12 +11,16 @@ namespace shopapp.model
     {
         private List<Customer> customerList;
         private List<Product> productList;
+        private List<OrderProductList> orderProductList;
+        private List<Order> orderList;
 
         private FileHelper fileHelper;
 
         public ShopAppModel()
         {
             fileHelper = FileHelper.GetInstance();
+
+
             customerList = fileHelper.LoadCustomerFromFile();            
             if (customerList.Count > 0)
             {
@@ -26,6 +30,7 @@ namespace shopapp.model
             else {
                 Customer.NextId = 0;
             }
+
 
             productList = fileHelper.LoadProductFromFile();
             if (productList.Count > 0)
@@ -78,8 +83,7 @@ namespace shopapp.model
         /***************************************************/
         public List<Product> getProductList()
         {
-            return productList;
-            //return new List<Product>();
+            return productList;            
         }
 
         public void AddProduct(Product product)
@@ -97,5 +101,50 @@ namespace shopapp.model
             productList.RemoveAt(index);
         }
 
+        /***************************************************/
+        /*************  PRODUCT SECTION  *******************/
+        /***************************************************/
+        public List<OrderProductList> getOrderProductList()
+        {
+            return orderProductList;
+        }
+
+        public void AddOrderProductList(OrderProductList list)
+        {
+            orderProductList.Add(list);
+        }
+
+        public void EditOrderProductList(OrderProductList list, int index)
+        {
+            orderProductList[index] = list;
+        }
+
+        public void RemoveOrderProductList(int index)
+        {
+            orderProductList.RemoveAt(index);
+        }
+
+        /***************************************************/
+        /***************  ORDER SECTION  *******************/
+        /***************************************************/
+        public List<Order> getOrderList()
+        {
+            return orderList;
+        }
+
+        public void AddOrder(Order order)
+        {
+            orderList.Add(order);
+        }
+
+        public void EditOrder(Order order, int index)
+        {
+            orderList[index] = order;
+        }
+
+        public void RemoveOrder(int index)
+        {
+            orderList.RemoveAt(index);
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace shopapp.entities
 {
-    class ProductList
+    class OrderProductList
     {
         private static int nextId;
 
@@ -19,7 +19,7 @@ namespace shopapp.entities
         public int Id { get; }
         public Dictionary<int, int> productListDictionary { set; get; }
 
-        public ProductList (Dictionary<int, int> productList)
+        public OrderProductList (Dictionary<int, int> productList)
         {
             this.Id = NextId;
             this.productListDictionary = productList;
