@@ -49,8 +49,9 @@ namespace shopapp
         public decimal ProductPrice       
         {
             get {
-                string text = Regex.Replace(this.priceTextBox.Text, @"[.,]", "");
-                return Decimal.Parse(text);
+                //string text = Regex.Replace(this.priceTextBox.Text, @"[.,]", "");
+                string text = this.priceTextBox.Text;
+                return (Decimal)Double.Parse(text) * 100;
             }
             set {
                 this.price = value;

@@ -181,11 +181,19 @@ namespace shopapp.model
         {
             orderList = fileHelper.LoadOrdersFromFile();
             if (orderList.Count > 0)
-            {
+            {                
                 var MaxId = (from p in orderList select p.Id).Max();
                 Order.NextId = ++MaxId;
 
                 Console.WriteLine("Product max id - " + MaxId);
+
+                // Load customers to orders by ID
+                foreach (Order o in orderList) {                    
+                    var customers = from cust in customerList where cust.Id == o.CustomerId select cust;
+                    foreach (Customer c in customers) { 
+                        o.OrderCustomer = c;
+                    }
+                }
             }
             else
             {
