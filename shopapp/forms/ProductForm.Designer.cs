@@ -36,8 +36,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ageLabel = new System.Windows.Forms.Label();
             this.priceTextBox = new System.Windows.Forms.TextBox();
-            this.quantityTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameTextBox
@@ -114,31 +112,11 @@
             this.priceTextBox.TabIndex = 16;
             this.priceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceTextBox_KeyPress);
             // 
-            // quantityTextBox
-            // 
-            this.quantityTextBox.Location = new System.Drawing.Point(94, 110);
-            this.quantityTextBox.MaxLength = 10;
-            this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(175, 20);
-            this.quantityTextBox.TabIndex = 26;
-            this.quantityTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTextBox_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Quantity";
-            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.quantityTextBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.idtextBox);
@@ -163,7 +141,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label ageLabel;
         private System.Windows.Forms.TextBox priceTextBox;
-        private System.Windows.Forms.TextBox quantityTextBox;
-        private System.Windows.Forms.Label label1;
     }
 }

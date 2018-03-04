@@ -47,8 +47,6 @@ namespace shopapp
             this.productIdTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.productsListBox = new System.Windows.Forms.ListBox();
-            this.productQuantityTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.productPriceTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.productNameTextBox = new System.Windows.Forms.TextBox();
@@ -204,8 +202,6 @@ namespace shopapp
             this.tabPage2.Controls.Add(this.productIdTextBox);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.productsListBox);
-            this.tabPage2.Controls.Add(this.productQuantityTextBox);
-            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.productPriceTextBox);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.productNameTextBox);
@@ -244,24 +240,6 @@ namespace shopapp
             this.productsListBox.Size = new System.Drawing.Size(178, 160);
             this.productsListBox.TabIndex = 19;
             this.productsListBox.SelectedIndexChanged += new System.EventHandler(this.productsListBox_SelectedIndexChanged);
-            // 
-            // productQuantityTextBox
-            // 
-            this.productQuantityTextBox.Enabled = false;
-            this.productQuantityTextBox.Location = new System.Drawing.Point(108, 143);
-            this.productQuantityTextBox.Name = "productQuantityTextBox";
-            this.productQuantityTextBox.ReadOnly = true;
-            this.productQuantityTextBox.Size = new System.Drawing.Size(175, 20);
-            this.productQuantityTextBox.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Quantity";
             // 
             // productPriceTextBox
             // 
@@ -434,8 +412,6 @@ namespace shopapp
         private System.Windows.Forms.TextBox productIdTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox productsListBox;
-        private System.Windows.Forms.TextBox productQuantityTextBox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox productPriceTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox productNameTextBox;

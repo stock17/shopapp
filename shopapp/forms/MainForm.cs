@@ -66,8 +66,7 @@ namespace shopapp
         {
             this.productIdTextBox.Text = product.Id.ToString();
             this.productNameTextBox.Text = product.Name;
-            this.productPriceTextBox.Text = (product.Price / 100).ToString();
-            this.productQuantityTextBox.Text = product.Quantity.ToString();            
+            this.productPriceTextBox.Text = (product.Price / 100).ToString();                  
         }
 
         private void EnableSave() {
@@ -109,7 +108,7 @@ namespace shopapp
                 ProductForm productForm = new ProductForm();
                 if (productForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    Product p = new Product(productForm.ProdName, productForm.ProductPrice, productForm.ProductQuantity);
+                    Product p = new Product(productForm.ProdName, productForm.ProductPrice);
                     presenter.onAddProduct(p);
                     showProduct(p);
                     EnableSave();
@@ -158,7 +157,7 @@ namespace shopapp
                 {
                     CurrentProduct.Name = productForm.ProdName;
                     CurrentProduct.Price = productForm.ProductPrice;
-                    CurrentProduct.Quantity = productForm.ProductQuantity;
+                    
                     
                     int CurrentIndex = productsListBox.SelectedIndex;
                     presenter.OnEditProduct(CurrentProduct, CurrentIndex);

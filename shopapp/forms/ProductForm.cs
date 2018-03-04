@@ -30,7 +30,7 @@ namespace shopapp
             this.ProductId = product.Id;
             this.ProdName = product.Name;
             this.ProductPrice = product.Price;
-            this.ProductQuantity = product.Quantity;
+            
         }
 
         public int ProductId
@@ -56,14 +56,7 @@ namespace shopapp
                 this.price = value;
                 this.priceTextBox.Text = (price / 100).ToString();
             }
-        }
-
-        
-        public int ProductQuantity
-        {
-            get { return Int32.Parse(this.quantityTextBox.Text); }
-            set { this.quantityTextBox.Text = value.ToString(); }
-        }
+        }             
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,13 +69,7 @@ namespace shopapp
                 DialogResult = DialogResult.None;
                 return;
             }
-
-            string quantity = quantityTextBox.Text;
-            if (quantity == "" || Int32.Parse(quantity) < 0 || Int32.Parse(quantity) > int.MaxValue) {
-                MessageBox.Show("Incorrect quantity");
-                DialogResult = DialogResult.None;
-                return;
-            }
+           
 
             string price = priceTextBox.Text;
             bool PriceOK = Regex.IsMatch(price, "^\\d+(.\\d{1,2})?$");

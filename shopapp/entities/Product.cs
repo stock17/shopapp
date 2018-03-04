@@ -12,11 +12,11 @@ namespace shopapp.entities
     {
         public static int NextId;
 
-        public Product(string name, decimal price, int quantity) {
+        public Product(string name, decimal price) {
             this.Id = NextId++;
             this.Name = name;
             this.Price = price;
-            this.Quantity = quantity;
+            
         }
 
         [DataMember]
@@ -25,8 +25,7 @@ namespace shopapp.entities
         public string Name { get; set; }
         [DataMember]
         public decimal Price { get; set; }
-        [DataMember]
-        public int Quantity { get; set; }
+       
 
     }
 }
