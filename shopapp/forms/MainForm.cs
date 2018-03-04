@@ -1,4 +1,5 @@
 ﻿using shopapp.entities;
+using shopapp.forms;
 using shopapp.presenter;
 using System;
 using System.Collections.Generic;
@@ -112,6 +113,19 @@ namespace shopapp
                     presenter.onAddProduct(p);
                     showProduct(p);
                     EnableSave();
+
+                }
+            }
+
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                OrderForm orderForm = new OrderForm(CustomerList, ProductList);
+                if (orderForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    //Product p = new Product(productForm.ProdName, productForm.ProductPrice, productForm.ProductQuantity);
+                    //presenter.onAddProduct(p);
+                    //showProduct(p);
+                    //EnableSave();
 
                 }
             }

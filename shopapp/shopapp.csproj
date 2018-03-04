@@ -49,6 +49,18 @@
   <ItemGroup>
     <Compile Include="entities\Customer.cs" />
     <Compile Include="entities\Product.cs" />
+    <Compile Include="forms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     <Compile Include="presenter\ShopAppPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>

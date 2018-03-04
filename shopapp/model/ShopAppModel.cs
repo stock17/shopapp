@@ -11,6 +11,7 @@ namespace shopapp.model
     {
         private List<Customer> customerList;
         private List<Product> productList;
+
         private FileHelper fileHelper;
 
         public ShopAppModel()
