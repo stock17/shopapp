@@ -60,7 +60,8 @@ namespace shopapp
 
             foreach (Order o in this.OrderList)
             {
-                this.ordersListBox.Items.Add(o.OrderCustomer.Name + "   " + o.Date.ToString());
+                string name = o.OrderCustomer != null ? o.OrderCustomer.Name : "removed";
+                this.ordersListBox.Items.Add(name + "   " + o.Date.ToString());
             }
             
 
@@ -146,7 +147,7 @@ namespace shopapp
                 OrderForm orderForm = new OrderForm(CustomerList, ProductList);
                 if (orderForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    OrderProductList list = new OrderProductList(orderForm.ProductListDictionary);
+                    OrderProductList list = new OrderProductList(orderForm.newOrderProductList, orderForm.newOrderQuantityProductList);
                     int customerIndex = orderForm.CustomerIndex;
                     Order order = new Order(CustomerList[customerIndex], list, orderForm.datePickerValue);
                     presenter.onAddOrder(order, list);

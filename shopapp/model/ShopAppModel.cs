@@ -170,6 +170,18 @@ namespace shopapp.model
                 OrderProductList.NextId = ++MaxId;
 
                 Console.WriteLine("Product max id - " + MaxId);
+
+                foreach (OrderProductList list in orderProductLists) {
+                    list.ProductList = new List<Product>();
+                    foreach (int id in list.ProductIdList) {
+
+                        var products = from p in productList where p.Id == id select p;
+                        foreach (Product prod in products)
+                        {
+                            list.ProductList.Add(prod);
+                        }
+                    }                    
+                }
             }
             else
             {
@@ -187,7 +199,7 @@ namespace shopapp.model
 
                 Console.WriteLine("Product max id - " + MaxId);
 
-                // Load customers to orders by ID
+                // Load Customers and ProductLists to Orders by ID
                 foreach (Order o in orderList) {                    
                     var customers = from cust in customerList where cust.Id == o.CustomerId select cust;                    
                     foreach (Customer c in customers) { 
@@ -198,8 +210,7 @@ namespace shopapp.model
                     foreach (OrderProductList list in orderProductLists) {
                         o.ProductList = list;
                     }
-                }
-                // Load ProductLists to Orders by ID
+                }               
 
             }
             else

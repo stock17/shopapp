@@ -20,13 +20,23 @@ namespace shopapp.entities
 
         [DataMember]
         public int Id { get; set; }
+        
+        public List<Product> ProductList { set; get; }
         [DataMember]
-        public Dictionary<int, int> productListDictionary { set; get; }
+        public List<int> ProductIdList { set; get; }
+        [DataMember]
+        public List<int> QuantityList { set; get; }
 
-        public OrderProductList (Dictionary<int, int> productList)
+        public OrderProductList (List<Product> productList, List<int> quantityList)
         {
             this.Id = nextId++;
-            this.productListDictionary = productList;
+            this.ProductList = productList;
+            this.QuantityList = quantityList;
+            this.ProductIdList = new List<int>();
+            foreach (Product p in ProductList) {
+                ProductIdList.Add(p.Id);
+            }
+           
         }
         
     }

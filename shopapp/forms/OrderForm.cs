@@ -13,6 +13,14 @@ namespace shopapp.forms
 {
     public partial class OrderForm : Form
     {
+        private int productIndex;
+        private List<Product> OrderProductList;
+        
+
+
+        public List<Product> newOrderProductList { set; get; }
+        public List<int> newOrderQuantityProductList { set; get; }
+        
         public OrderForm()
         {
             InitializeComponent();         
@@ -21,7 +29,9 @@ namespace shopapp.forms
         {
             InitializeComponent();
 
-            ProductListDictionary = new Dictionary<int, int>();
+            newOrderProductList = new List<Product>();
+            newOrderQuantityProductList = new List<int>();
+
             OrderProductList = productList;          
 
 
@@ -30,10 +40,7 @@ namespace shopapp.forms
 
         }
 
-        private int productIndex;
-        private List<Product> OrderProductList;
-        public Dictionary<int, int> ProductListDictionary;
-        
+              
                 
         public int CustomerIndex {            
             get { return customerListOrderFormComboBox.SelectedIndex; }
@@ -55,7 +62,8 @@ namespace shopapp.forms
                 int quantity = addProductForm.Quantity;
                 this.produstListOrderFormListBox.Items.Add(product.Name + " " + quantity.ToString() + " pc");
 
-                ProductListDictionary[product.Id] = quantity;
+                newOrderProductList.Add(product);
+                newOrderQuantityProductList.Add(quantity);
             }
         }
 
