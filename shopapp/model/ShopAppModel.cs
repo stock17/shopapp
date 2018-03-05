@@ -123,6 +123,8 @@ namespace shopapp.model
 
         public void RemoveOrder(int index)
         {
+            OrderProductList list = orderList[index].ProductList;
+            orderProductLists.Remove(list);            
             orderList.RemoveAt(index);
         }
 
@@ -207,7 +209,7 @@ namespace shopapp.model
                     }
 
                     var productLists = from list in orderProductLists where list.Id == o.ProductListId select list;
-                    foreach (OrderProductList list in orderProductLists) {
+                    foreach (OrderProductList list in productLists) {
                         o.ProductList = list;
                     }
                 }               

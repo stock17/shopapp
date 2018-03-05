@@ -188,6 +188,8 @@ namespace shopapp
 
         }
 
+        /// -------------------- REMOVE BUTTON ----------------------------------///
+
         private void removeButton_Click(object sender, EventArgs e)
         {
             if (tabControl1.SelectedIndex == 0 && this.CurrentCustomer != null)
@@ -203,6 +205,14 @@ namespace shopapp
                 int CurrentIndex = productsListBox.SelectedIndex;
                 presenter.OnRemoveProduct(CurrentIndex);
                 CurrentProduct = null;
+                EnableSave();
+            }
+
+            else if  (tabControl1.SelectedIndex == 2 && this.CurrentOrder != null)
+            {
+                int CurrentIndex = ordersListBox.SelectedIndex;
+                presenter.OnRemoveOrder(CurrentIndex);
+                CurrentOrder = null;
                 EnableSave();
             }
         }
@@ -227,14 +237,21 @@ namespace shopapp
             }
         }
 
+
+
         private void saveButton_Click(object sender, EventArgs e)
         {
             presenter.onSave();
             DisableSave();
         }
 
+
         #endregion
 
-
+        private void ordersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListBox box = (ListBox)sender;
+            CurrentOrder = OrderList[box.SelectedIndex];
+        }
     }
 }

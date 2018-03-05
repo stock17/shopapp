@@ -96,6 +96,7 @@ namespace shopapp.presenter
 
 
 
+
         public void onAddOrder(Order order, OrderProductList list)
         {
             model.AddOrder(order);
@@ -105,13 +106,12 @@ namespace shopapp.presenter
 
         public void OnEditOrder(Order order, int index)
         {
-            model.EditOrder(order, index);
-            RefreshMainForm();
+           
         }
 
         public void OnRemoveOrder(int index)
-        {
-            model.RemoveProduct(index);
+        {            
+            model.RemoveOrder(index);
             RefreshMainForm();
         }
 

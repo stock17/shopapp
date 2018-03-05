@@ -52,6 +52,7 @@ namespace shopapp
             this.productNameTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ordersListBox = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.removeButton = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@ namespace shopapp
             this.newButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.ordersListBox = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -290,6 +290,15 @@ namespace shopapp
             this.tabPage3.Text = "Orders";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // ordersListBox
+            // 
+            this.ordersListBox.FormattingEnabled = true;
+            this.ordersListBox.Location = new System.Drawing.Point(31, 18);
+            this.ordersListBox.Name = "ordersListBox";
+            this.ordersListBox.Size = new System.Drawing.Size(489, 199);
+            this.ordersListBox.TabIndex = 0;
+            this.ordersListBox.SelectedIndexChanged += new System.EventHandler(this.ordersListBox_SelectedIndexChanged);
+            // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -365,14 +374,6 @@ namespace shopapp
             this.saveButton.TabIndex = 3;
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // ordersListBox
-            // 
-            this.ordersListBox.FormattingEnabled = true;
-            this.ordersListBox.Location = new System.Drawing.Point(31, 18);
-            this.ordersListBox.Name = "ordersListBox";
-            this.ordersListBox.Size = new System.Drawing.Size(489, 199);
-            this.ordersListBox.TabIndex = 0;
             // 
             // MainForm
             // 
