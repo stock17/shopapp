@@ -31,12 +31,14 @@
             this.customerCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.statusCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.productCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.dateFromTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateToTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateCheckBox = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // customerCheckedListBox
@@ -61,66 +63,92 @@
             this.textBox2.Size = new System.Drawing.Size(58, 20);
             this.textBox2.TabIndex = 2;
             // 
-            // checkedListBox2
+            // statusCheckedListBox
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(13, 200);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(184, 49);
-            this.checkedListBox2.TabIndex = 3;
+            this.statusCheckedListBox.FormattingEnabled = true;
+            this.statusCheckedListBox.Location = new System.Drawing.Point(13, 200);
+            this.statusCheckedListBox.Name = "statusCheckedListBox";
+            this.statusCheckedListBox.Size = new System.Drawing.Size(184, 49);
+            this.statusCheckedListBox.TabIndex = 3;
             // 
-            // checkedListBox3
+            // productCheckedListBox
             // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(221, 13);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(120, 229);
-            this.checkedListBox3.TabIndex = 4;
+            this.productCheckedListBox.FormattingEnabled = true;
+            this.productCheckedListBox.Location = new System.Drawing.Point(221, 13);
+            this.productCheckedListBox.Name = "productCheckedListBox";
+            this.productCheckedListBox.Size = new System.Drawing.Size(120, 229);
+            this.productCheckedListBox.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dateFromTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(363, 46);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateFromTimePicker.Enabled = false;
+            this.dateFromTimePicker.Location = new System.Drawing.Point(363, 46);
+            this.dateFromTimePicker.Name = "dateFromTimePicker";
+            this.dateFromTimePicker.Size = new System.Drawing.Size(161, 20);
+            this.dateFromTimePicker.TabIndex = 5;
             // 
-            // dateTimePicker2
+            // dateToTimePicker
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(363, 89);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(161, 20);
-            this.dateTimePicker2.TabIndex = 6;
+            this.dateToTimePicker.Enabled = false;
+            this.dateToTimePicker.Location = new System.Drawing.Point(363, 89);
+            this.dateToTimePicker.Name = "dateToTimePicker";
+            this.dateToTimePicker.Size = new System.Drawing.Size(161, 20);
+            this.dateToTimePicker.TabIndex = 6;
             // 
-            // checkBox1
+            // dateCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(363, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.dateCheckBox.AutoSize = true;
+            this.dateCheckBox.Checked = true;
+            this.dateCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.dateCheckBox.Location = new System.Drawing.Point(363, 13);
+            this.dateCheckBox.Name = "dateCheckBox";
+            this.dateCheckBox.Size = new System.Drawing.Size(76, 17);
+            this.dateCheckBox.TabIndex = 7;
+            this.dateCheckBox.Text = "For all time";
+            this.dateCheckBox.UseVisualStyleBackColor = true;
+            this.dateCheckBox.CheckedChanged += new System.EventHandler(this.dateCheckBox_CheckedChanged);
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(398, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 69);
             this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
+            this.button1.Text = "REPORT";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Age";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(113, 175);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "to";
             // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 261);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.checkedListBox3);
-            this.Controls.Add(this.checkedListBox2);
+            this.Controls.Add(this.dateCheckBox);
+            this.Controls.Add(this.dateToTimePicker);
+            this.Controls.Add(this.dateFromTimePicker);
+            this.Controls.Add(this.productCheckedListBox);
+            this.Controls.Add(this.statusCheckedListBox);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.customerCheckedListBox);
@@ -137,11 +165,13 @@
         private System.Windows.Forms.CheckedListBox customerCheckedListBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckedListBox statusCheckedListBox;
+        private System.Windows.Forms.CheckedListBox productCheckedListBox;
+        private System.Windows.Forms.DateTimePicker dateFromTimePicker;
+        private System.Windows.Forms.DateTimePicker dateToTimePicker;
+        private System.Windows.Forms.CheckBox dateCheckBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

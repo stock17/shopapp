@@ -28,8 +28,17 @@ namespace shopapp.forms
         private void ReportForm_Load(object sender, EventArgs e)
         {
             this.customerCheckedListBox.DataSource = CustomerList.Select(c => c.Name).ToList();
+            this.statusCheckedListBox.DataSource = Enum.GetValues(typeof(Customer.SocialStatus));
+            this.productCheckedListBox.DataSource = ProductList.Select(p => p.Name).ToList();
 
 
+        }
+
+        private void dateCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            this.dateFromTimePicker.Enabled = !box.Checked;
+            this.dateToTimePicker.Enabled = !box.Checked;
         }
     }
 }
