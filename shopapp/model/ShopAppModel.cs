@@ -230,6 +230,7 @@ namespace shopapp.model
                           cList.Contains(o.OrderCustomer) &&
                           o.OrderCustomer.Age > fromAge &&
                           o.OrderCustomer.Age < toAge && 
+                          statusList[o.OrderCustomer.Status] &&
                           o.Date > fromDate &&
                           o.Date < toDate
                           select o;
@@ -239,7 +240,7 @@ namespace shopapp.model
             {
                 foreach(Product p in o.ProductList.ProductList)
                 {
-                    if (pList.Contains(p))
+                    if (pList.Contains(p)) 
                         result.Add(o);
                     continue;
                 }                
