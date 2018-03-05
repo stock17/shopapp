@@ -148,7 +148,7 @@ namespace shopapp
                 {
                     OrderProductList list = new OrderProductList(orderForm.ProductListDictionary);
                     int customerIndex = orderForm.CustomerIndex;
-                    Order order = new Order(CustomerList[customerIndex], list.Id, orderForm.datePickerValue);
+                    Order order = new Order(CustomerList[customerIndex], list, orderForm.datePickerValue);
                     presenter.onAddOrder(order, list);
                     EnableSave();
 

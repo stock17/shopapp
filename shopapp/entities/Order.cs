@@ -17,12 +17,13 @@ namespace shopapp.entities
             set { nextId = value; }
         }
 
-        public Order(Customer customer, int productListId, DateTime date)
+        public Order(Customer customer, OrderProductList productList, DateTime date)
         {
             this.Id = nextId++;
             this.OrderCustomer = customer;
             this.CustomerId = customer.Id;
-            this.ProductListId = productListId;
+            this.ProductList = productList;
+            this.ProductListId = productList.Id;
             this.Date = date;
         }
 
@@ -36,5 +37,6 @@ namespace shopapp.entities
         public DateTime Date { set; get; }
 
         public Customer OrderCustomer { set; get; }
+        public OrderProductList ProductList { set; get; }
     }
 }

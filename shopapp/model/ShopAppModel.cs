@@ -189,11 +189,18 @@ namespace shopapp.model
 
                 // Load customers to orders by ID
                 foreach (Order o in orderList) {                    
-                    var customers = from cust in customerList where cust.Id == o.CustomerId select cust;
+                    var customers = from cust in customerList where cust.Id == o.CustomerId select cust;                    
                     foreach (Customer c in customers) { 
                         o.OrderCustomer = c;
                     }
+
+                    var productLists = from list in orderProductLists where list.Id == o.ProductListId select list;
+                    foreach (OrderProductList list in orderProductLists) {
+                        o.ProductList = list;
+                    }
                 }
+                // Load ProductLists to Orders by ID
+
             }
             else
             {
