@@ -222,6 +222,26 @@ namespace shopapp.model
         }
 
 
+        //======================== REPORT =====================//
+        public List<Order> GetReport(List<Customer> cList, int fromAge, int toAge, List<bool> statusList, List<Product> pList,
+            DateTime fromDate, DateTime toDate) {
+
+            var request = from o in orderList where
+                          cList.Contains(o.OrderCustomer) &&
+                          o.OrderCustomer.Age > fromAge &&
+                          o.OrderCustomer.Age < toAge && 
+                          o.Date > fromDate &&
+                          o.Date < toDate
+                          select o;
+
+            List < Order > result = new List<Order>();
+            foreach (Order o in request)
+            {
+                result.Add(o);
+            }
+
+            return result;
+        }
 
 
     }

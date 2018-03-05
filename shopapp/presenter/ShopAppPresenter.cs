@@ -18,7 +18,8 @@ namespace shopapp.presenter
         {
             void refreshInfo(List<Customer> customerList, List<Product> productList, List<Order> orderList);
             void showCustomer(Customer customer);
-            void showProduct(Product product);            
+            void showProduct(Product product);
+            void ShowReport(List<Order> orders);
         }
 
         public ShopAppPresenter(IMainForm mainform)
@@ -118,6 +119,14 @@ namespace shopapp.presenter
         public void OnOrderSelected(Product product)
         {
             RefreshMainForm();
+        }
+
+
+        public void OnRequestReport(List<Customer> cList, int fromAge, int toAge, List<bool> statusList, List<Product> pList,
+            DateTime fromDate, DateTime toDate)
+        {
+            List<Order> orders = model.GetReport(cList, fromAge, toAge, statusList, pList, fromDate, toDate);
+            mainform.ShowReport(orders);
         }
 
 

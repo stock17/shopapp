@@ -87,6 +87,12 @@
     <Compile Include="forms\RequestReportForm.Designer.cs">
       <DependentUpon>RequestReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\ResultReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ResultReportForm.Designer.cs">
+      <DependentUpon>ResultReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\FileHelper.cs" />
     <Compile Include="model\ShopAppModel.cs" />
     <Compile Include="presenter\ShopAppPresenter.cs" />
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\RequestReportForm.resx">
       <DependentUpon>RequestReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ResultReportForm.resx">
+      <DependentUpon>ResultReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

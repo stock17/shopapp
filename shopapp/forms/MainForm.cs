@@ -87,6 +87,13 @@ namespace shopapp
             this.productPriceTextBox.Text = (product.Price / 100).ToString();                  
         }
 
+        public void ShowReport(List<Order> orders)
+        {
+            //TODO
+            ResultReportForm form = new ResultReportForm(orders);
+            form.ShowDialog(this);
+        }
+
         private void EnableSave() {
             saveButton.Enabled = true;
             saveButton.Image = shopapp.Properties.Resources.save_enabled;
@@ -259,7 +266,14 @@ namespace shopapp
             RequestReportForm reportForm = new RequestReportForm(CustomerList, ProductList);
                 if (reportForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    // SOME ACTIONS
+                presenter.OnRequestReport(
+                    reportForm.ReportCustomerList,
+                    reportForm.FromAge,
+                    reportForm.ToAge,
+                    reportForm.StatusList,
+                    reportForm.ReportProductList,
+                    reportForm.FromDate,
+                    reportForm.ToDate);
                 }
             
         }
