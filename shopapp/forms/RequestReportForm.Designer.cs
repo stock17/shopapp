@@ -1,6 +1,6 @@
 ﻿namespace shopapp.forms
 {
-    partial class ReportForm
+    partial class RequestReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.customerCheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fromAgeTextBox = new System.Windows.Forms.TextBox();
+            this.toAgeTextBox = new System.Windows.Forms.TextBox();
             this.statusCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.productCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.dateFromTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -49,19 +49,19 @@
             this.customerCheckedListBox.Size = new System.Drawing.Size(184, 154);
             this.customerCheckedListBox.TabIndex = 0;
             // 
-            // textBox1
+            // fromAgeTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(51, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 20);
-            this.textBox1.TabIndex = 1;
+            this.fromAgeTextBox.Location = new System.Drawing.Point(51, 173);
+            this.fromAgeTextBox.Name = "fromAgeTextBox";
+            this.fromAgeTextBox.Size = new System.Drawing.Size(54, 20);
+            this.fromAgeTextBox.TabIndex = 1;
             // 
-            // textBox2
+            // toAgeTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 20);
-            this.textBox2.TabIndex = 2;
+            this.toAgeTextBox.Location = new System.Drawing.Point(139, 173);
+            this.toAgeTextBox.Name = "toAgeTextBox";
+            this.toAgeTextBox.Size = new System.Drawing.Size(58, 20);
+            this.toAgeTextBox.TabIndex = 2;
             // 
             // statusCheckedListBox
             // 
@@ -136,7 +136,7 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "to";
             // 
-            // ReportForm
+            // RequestReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,10 +149,10 @@
             this.Controls.Add(this.dateFromTimePicker);
             this.Controls.Add(this.productCheckedListBox);
             this.Controls.Add(this.statusCheckedListBox);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.toAgeTextBox);
+            this.Controls.Add(this.fromAgeTextBox);
             this.Controls.Add(this.customerCheckedListBox);
-            this.Name = "ReportForm";
+            this.Name = "RequestReportForm";
             this.Text = "ReportForm";
             this.Load += new System.EventHandler(this.ReportForm_Load);
             this.ResumeLayout(false);
@@ -163,8 +163,8 @@
         #endregion
 
         private System.Windows.Forms.CheckedListBox customerCheckedListBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox fromAgeTextBox;
+        private System.Windows.Forms.TextBox toAgeTextBox;
         private System.Windows.Forms.CheckedListBox statusCheckedListBox;
         private System.Windows.Forms.CheckedListBox productCheckedListBox;
         private System.Windows.Forms.DateTimePicker dateFromTimePicker;

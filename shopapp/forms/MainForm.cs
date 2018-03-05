@@ -256,7 +256,7 @@ namespace shopapp
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            ReportForm reportForm = new ReportForm(CustomerList, ProductList);
+            RequestReportForm reportForm = new RequestReportForm(CustomerList, ProductList);
                 if (reportForm.ShowDialog(this) == DialogResult.OK)
                 {
                     // SOME ACTIONS

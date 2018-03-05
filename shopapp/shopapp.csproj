@@ -81,11 +81,11 @@
     <Compile Include="forms\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ReportForm.cs">
+    <Compile Include="forms\RequestReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\ReportForm.Designer.cs">
-      <DependentUpon>ReportForm.cs</DependentUpon>
+    <Compile Include="forms\RequestReportForm.Designer.cs">
+      <DependentUpon>RequestReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="model\FileHelper.cs" />
     <Compile Include="model\ShopAppModel.cs" />
@@ -107,8 +107,8 @@
     <EmbeddedResource Include="forms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ReportForm.resx">
-      <DependentUpon>ReportForm.cs</DependentUpon>
+    <EmbeddedResource Include="forms\RequestReportForm.resx">
+      <DependentUpon>RequestReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
