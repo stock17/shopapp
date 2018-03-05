@@ -60,23 +60,15 @@ namespace shopapp
 
             foreach (Order o in this.OrderList)
             {
-                string name = o.OrderCustomer != null ? o.OrderCustomer.Name : "removed";
-                this.ordersListBox.Items.Add(name + "   " + o.Date.ToString());
-            }
-            
+                string text = o.OrderCustomer != null ? o.OrderCustomer.Name : "removed";
+                text = text + " " + o.Date.ToString();
+                for (int i = 0; i < o.ProductList.ProductList.Count; i++) {
+                    text = text + " " + o.ProductList.ProductList[i].Name;
+                    text = text + " - " + o.ProductList.QuantityList[i];
+                }
 
-
-            //foreach (Order o in this.OrderList)
-            //{
-            //    var customers = from cust in customerList where cust.Id == o.CustomerId select cust as Customer;
-            //    foreach (Customer c in customers)
-            //    {
-            //        this.ordersListBox.Items.Add(c.Name + "   " + o.Date.ToString() );
-            //    }
-
-
-
-            //}
+                this.ordersListBox.Items.Add(text);
+            }           
         }
 
         public void showCustomer(Customer customer)
