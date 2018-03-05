@@ -237,7 +237,12 @@ namespace shopapp.model
             List < Order > result = new List<Order>();
             foreach (Order o in request)
             {
-                result.Add(o);
+                foreach(Product p in o.ProductList.ProductList)
+                {
+                    if (pList.Contains(p))
+                        result.Add(o);
+                    continue;
+                }                
             }
 
             return result;
