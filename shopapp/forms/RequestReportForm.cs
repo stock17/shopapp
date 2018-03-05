@@ -87,7 +87,19 @@ namespace shopapp.forms
             }
         }
 
-        // TODO STATUS
+        // DONE STATUS
+        public List<bool> StatusList
+        {
+            get
+            {
+                List<bool> list = new List<bool>();
+                for (int i = 0; i < statusCheckedListBox.Items.Count; i++)
+                    list.Add(statusCheckedListBox.GetItemChecked(i));
+                return List;
+            }           
+
+        }
+               
         public DateTime FromDate
         {
             get
