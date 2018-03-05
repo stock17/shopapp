@@ -358,6 +358,7 @@ namespace shopapp
             this.reportButton.TabIndex = 2;
             this.reportButton.Text = "Make report";
             this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
             // saveButton
             // 

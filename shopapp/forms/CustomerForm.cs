@@ -95,6 +95,11 @@ namespace shopapp
             e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
         
     }
 }

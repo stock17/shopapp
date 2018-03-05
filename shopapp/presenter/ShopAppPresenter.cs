@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace shopapp.presenter
 {
-    class ShopAppPresenter
+    public class ShopAppPresenter
     {
         private ShopAppModel model;
 

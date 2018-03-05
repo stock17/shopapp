@@ -253,5 +253,15 @@ namespace shopapp
             ListBox box = (ListBox)sender;
             CurrentOrder = OrderList[box.SelectedIndex];
         }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm(CustomerList, ProductList);
+                if (reportForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    // SOME ACTIONS
+                }
+            
+        }
     }
 }
