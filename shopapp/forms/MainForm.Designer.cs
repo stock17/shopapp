@@ -92,6 +92,7 @@ namespace shopapp
             this.tabPage1.Controls.Add(this.sexLabel);
             this.tabPage1.Controls.Add(this.nameTextBox);
             this.tabPage1.Controls.Add(this.nameLabel);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -301,12 +302,13 @@ namespace shopapp
             // 
             // tabPage4
             // 
+            this.tabPage4.ForeColor = System.Drawing.Color.Red;
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(550, 239);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Testing";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox1

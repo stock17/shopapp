@@ -93,6 +93,7 @@
     <Compile Include="forms\ResultReportForm.Designer.cs">
       <DependentUpon>ResultReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\FakeBD.cs" />
     <Compile Include="model\FileHelper.cs" />
     <Compile Include="model\ShopAppModel.cs" />
     <Compile Include="presenter\ShopAppPresenter.cs" />
