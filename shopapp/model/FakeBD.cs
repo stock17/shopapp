@@ -9,8 +9,18 @@ namespace shopapp.model
 {
     class FakeBD
     {
+        private static Random Rand = new Random();
+
         public const int CUSTOMER_NUMBER = 50;
+
         public const int MAX_PRICE = 50000; // in kopeks
+
+        public const int MAX_ORDER_PRODUCT_LISTS = 150;
+        public const int MAX_PRODUCT_NUMBER_IN_LIST = 7;
+        public const int MAX_QUANTITY_PRODUCT_IN_LIST = 15;
+
+        public static readonly DateTime MIN_ORDER_DATE = DateTime.Parse("01/01/2018");
+        public static readonly DateTime MAX_ORDER_DATE = DateTime.Today;
 
         public static readonly string[] MenLastNames = { "Абрамов", "Авдеев", "Агафонов", "Аксёнов", "Александров", "Алексеев",
             "Андреев", "Анисимов", "Антонов", "Артемьев", "Архипов", "Афанасьев", "Баранов", "Белов", "Белозёров", "Белоусов",
@@ -130,26 +140,25 @@ namespace shopapp.model
 
         public static List<Customer> GenerateCustomerList()
         {
-            List<Customer> list = new List<Customer>();
-            Random rand = new Random();
+            List<Customer> list = new List<Customer>();            
 
             for (int i = 0; i < CUSTOMER_NUMBER; i++)
             {
-                bool sex = rand.Next(2) < 1;
+                bool sex = Rand.Next(2) < 1;
                 string customerName, customerLastName, customerFullName;
                 if (sex)
                 {
-                    customerName = FakeBD.MenNames[rand.Next(FakeBD.MenNames.Count())];
-                    customerLastName = FakeBD.MenLastNames[rand.Next(FakeBD.MenLastNames.Count())];
+                    customerName = FakeBD.MenNames[Rand.Next(FakeBD.MenNames.Count())];
+                    customerLastName = FakeBD.MenLastNames[Rand.Next(FakeBD.MenLastNames.Count())];
                 }
                 else
                 {
-                    customerName = FakeBD.WomenNames[rand.Next(FakeBD.WomenNames.Count())];
-                    customerLastName = FakeBD.WomenLastNames[rand.Next(FakeBD.WomenLastNames.Count())];
+                    customerName = FakeBD.WomenNames[Rand.Next(FakeBD.WomenNames.Count())];
+                    customerLastName = FakeBD.WomenLastNames[Rand.Next(FakeBD.WomenLastNames.Count())];
                 }
                 customerFullName = customerName + " " + customerLastName;
 
-                int age = rand.Next(Customer.MAX_AGE);
+                int age = Rand.Next(Customer.MAX_AGE);
 
                 Customer.SocialStatus status;
 
@@ -170,15 +179,60 @@ namespace shopapp.model
 
         public static List<Product> GenerateProductList() {
             List<Product> list = new List<Product>();
-            Random rand = new Random();
-
+            
             for (int i = 0; i < FakeBD.ProductNames.Count(); i++) {
-                int price = rand.Next(FakeBD.MAX_PRICE);
+                int price = Rand.Next(FakeBD.MAX_PRICE);
                 Product p = new entities.Product(FakeBD.ProductNames[i], price);
                 list.Add(p);
             }
 
             return list;
+        }
+
+        public static List<OrderProductList> GenerateOrderProductLists(List<Product> productList)         
+        {
+            List<OrderProductList> list = new List<OrderProductList>();
+            
+            for (int i = 0; i < MAX_ORDER_PRODUCT_LISTS; i++) {
+
+                List<Product> pList = new List<Product>();
+                List<int> iList = new List<int>();
+
+                int q = Rand.Next(MAX_PRODUCT_NUMBER_IN_LIST) + 1;
+                for (int j = 0; j < q; j++) {
+                    Product p = productList[Rand.Next(productList.Count)];
+                    pList.Add(p);
+                    int quantity = Rand.Next(MAX_QUANTITY_PRODUCT_IN_LIST) + 1;
+                    iList.Add(quantity);                    
+                }
+
+                OrderProductList orderProductList = new OrderProductList(pList, iList);
+                list.Add(orderProductList);
+            }
+
+            return list;
+        }
+
+        public static List<Order> GenerateOrderList(List<Customer> customerList, List<OrderProductList> orderProductList) {
+            List<Order> list = new List<Order>();
+            
+            for (int i = 0; i < orderProductList.Count; i++) {
+                DateTime randomDate = GetRandomDate(MIN_ORDER_DATE, MAX_ORDER_DATE);
+                Customer customer = customerList[Rand.Next(customerList.Count)];
+                Order o = new entities.Order(customer, orderProductList[i], randomDate);
+                list.Add(o);
+            }
+
+            var comparer = Comparer<Order>.Create((o1, o2) => o1.Date.CompareTo(o2.Date));
+            list.Sort(comparer);
+            return list;
+        }
+
+        public static DateTime GetRandomDate(DateTime from, DateTime to)
+        {                    
+            var range = to - from;
+            var randTimeSpan = new TimeSpan((long)(Rand.NextDouble() * range.Ticks));
+            return from + randTimeSpan;
         }
     }
 }
