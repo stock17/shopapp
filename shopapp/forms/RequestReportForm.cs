@@ -104,7 +104,7 @@ namespace shopapp.forms
         {
             get
             {
-                if (this.dateCheckBox.Enabled)
+                if (this.dateCheckBox.Checked)
                     return DateTime.MinValue;
                 else
                     return dateFromTimePicker.Value;
@@ -115,7 +115,7 @@ namespace shopapp.forms
         {
             get
             {
-                if (this.dateCheckBox.Enabled)
+                if (this.dateCheckBox.Checked)
                     return DateTime.MaxValue;
                 else
                     return dateToTimePicker.Value;

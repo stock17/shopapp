@@ -238,8 +238,8 @@ namespace shopapp.model
                           o.OrderCustomer.Age > fromAge &&
                           o.OrderCustomer.Age < toAge && 
                           statusList[o.OrderCustomer.Status] &&
-                          o.Date > fromDate &&
-                          o.Date < toDate
+                          o.Date >= fromDate &&
+                          o.Date <= toDate
                           select o;
 
             List < Order > result = new List<Order>();
@@ -247,9 +247,11 @@ namespace shopapp.model
             {
                 foreach(Product p in o.ProductList.ProductList)
                 {
-                    if (pList.Contains(p)) 
+                    if (pList.Contains(p)) {
                         result.Add(o);
-                    continue;
+                        break;
+                    }
+                    
                 }                
             }
 
