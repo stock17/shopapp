@@ -39,26 +39,30 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.allCustomersCheckedButton = new System.Windows.Forms.Button();
+            this.allCustomersUncheckedButton = new System.Windows.Forms.Button();
+            this.allProductUncheckedButton = new System.Windows.Forms.Button();
+            this.allPriductsCheckedButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // customerCheckedListBox
             // 
             this.customerCheckedListBox.FormattingEnabled = true;
-            this.customerCheckedListBox.Location = new System.Drawing.Point(13, 13);
+            this.customerCheckedListBox.Location = new System.Drawing.Point(33, 13);
             this.customerCheckedListBox.Name = "customerCheckedListBox";
             this.customerCheckedListBox.Size = new System.Drawing.Size(184, 154);
             this.customerCheckedListBox.TabIndex = 0;
             // 
             // fromAgeTextBox
             // 
-            this.fromAgeTextBox.Location = new System.Drawing.Point(51, 173);
+            this.fromAgeTextBox.Location = new System.Drawing.Point(71, 173);
             this.fromAgeTextBox.Name = "fromAgeTextBox";
             this.fromAgeTextBox.Size = new System.Drawing.Size(54, 20);
             this.fromAgeTextBox.TabIndex = 1;
             // 
             // toAgeTextBox
             // 
-            this.toAgeTextBox.Location = new System.Drawing.Point(139, 173);
+            this.toAgeTextBox.Location = new System.Drawing.Point(159, 173);
             this.toAgeTextBox.Name = "toAgeTextBox";
             this.toAgeTextBox.Size = new System.Drawing.Size(58, 20);
             this.toAgeTextBox.TabIndex = 2;
@@ -66,7 +70,7 @@
             // statusCheckedListBox
             // 
             this.statusCheckedListBox.FormattingEnabled = true;
-            this.statusCheckedListBox.Location = new System.Drawing.Point(13, 200);
+            this.statusCheckedListBox.Location = new System.Drawing.Point(33, 200);
             this.statusCheckedListBox.Name = "statusCheckedListBox";
             this.statusCheckedListBox.Size = new System.Drawing.Size(184, 49);
             this.statusCheckedListBox.TabIndex = 3;
@@ -74,7 +78,7 @@
             // productCheckedListBox
             // 
             this.productCheckedListBox.FormattingEnabled = true;
-            this.productCheckedListBox.Location = new System.Drawing.Point(221, 13);
+            this.productCheckedListBox.Location = new System.Drawing.Point(252, 13);
             this.productCheckedListBox.Name = "productCheckedListBox";
             this.productCheckedListBox.Size = new System.Drawing.Size(120, 229);
             this.productCheckedListBox.TabIndex = 4;
@@ -82,7 +86,7 @@
             // dateFromTimePicker
             // 
             this.dateFromTimePicker.Enabled = false;
-            this.dateFromTimePicker.Location = new System.Drawing.Point(363, 46);
+            this.dateFromTimePicker.Location = new System.Drawing.Point(394, 46);
             this.dateFromTimePicker.Name = "dateFromTimePicker";
             this.dateFromTimePicker.Size = new System.Drawing.Size(161, 20);
             this.dateFromTimePicker.TabIndex = 5;
@@ -90,7 +94,7 @@
             // dateToTimePicker
             // 
             this.dateToTimePicker.Enabled = false;
-            this.dateToTimePicker.Location = new System.Drawing.Point(363, 89);
+            this.dateToTimePicker.Location = new System.Drawing.Point(394, 89);
             this.dateToTimePicker.Name = "dateToTimePicker";
             this.dateToTimePicker.Size = new System.Drawing.Size(161, 20);
             this.dateToTimePicker.TabIndex = 6;
@@ -100,7 +104,7 @@
             this.dateCheckBox.AutoSize = true;
             this.dateCheckBox.Checked = true;
             this.dateCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.dateCheckBox.Location = new System.Drawing.Point(363, 13);
+            this.dateCheckBox.Location = new System.Drawing.Point(394, 13);
             this.dateCheckBox.Name = "dateCheckBox";
             this.dateCheckBox.Size = new System.Drawing.Size(76, 17);
             this.dateCheckBox.TabIndex = 7;
@@ -111,7 +115,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(398, 173);
+            this.button1.Location = new System.Drawing.Point(429, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 69);
             this.button1.TabIndex = 8;
@@ -121,7 +125,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 175);
+            this.label1.Location = new System.Drawing.Point(33, 175);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 9;
@@ -130,17 +134,61 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(113, 175);
+            this.label2.Location = new System.Drawing.Point(133, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "to";
             // 
+            // allCustomersCheckedButton
+            // 
+            this.allCustomersCheckedButton.Location = new System.Drawing.Point(4, 13);
+            this.allCustomersCheckedButton.Name = "allCustomersCheckedButton";
+            this.allCustomersCheckedButton.Size = new System.Drawing.Size(23, 23);
+            this.allCustomersCheckedButton.TabIndex = 11;
+            this.allCustomersCheckedButton.Text = "+";
+            this.allCustomersCheckedButton.UseVisualStyleBackColor = true;
+            this.allCustomersCheckedButton.Click += new System.EventHandler(this.allCustomersButton_Click);
+            // 
+            // allCustomersUncheckedButton
+            // 
+            this.allCustomersUncheckedButton.Location = new System.Drawing.Point(4, 42);
+            this.allCustomersUncheckedButton.Name = "allCustomersUncheckedButton";
+            this.allCustomersUncheckedButton.Size = new System.Drawing.Size(23, 23);
+            this.allCustomersUncheckedButton.TabIndex = 12;
+            this.allCustomersUncheckedButton.Text = "-";
+            this.allCustomersUncheckedButton.UseVisualStyleBackColor = true;
+            this.allCustomersUncheckedButton.Click += new System.EventHandler(this.allCustomersUncheckedButton_Click);
+            // 
+            // allProductUncheckedButton
+            // 
+            this.allProductUncheckedButton.Location = new System.Drawing.Point(223, 42);
+            this.allProductUncheckedButton.Name = "allProductUncheckedButton";
+            this.allProductUncheckedButton.Size = new System.Drawing.Size(23, 23);
+            this.allProductUncheckedButton.TabIndex = 14;
+            this.allProductUncheckedButton.Text = "-";
+            this.allProductUncheckedButton.UseVisualStyleBackColor = true;
+            this.allProductUncheckedButton.Click += new System.EventHandler(this.allProductUncheckedButton_Click);
+            // 
+            // allPriductsCheckedButton
+            // 
+            this.allPriductsCheckedButton.Location = new System.Drawing.Point(223, 13);
+            this.allPriductsCheckedButton.Name = "allPriductsCheckedButton";
+            this.allPriductsCheckedButton.Size = new System.Drawing.Size(23, 23);
+            this.allPriductsCheckedButton.TabIndex = 13;
+            this.allPriductsCheckedButton.Text = "+";
+            this.allPriductsCheckedButton.UseVisualStyleBackColor = true;
+            this.allPriductsCheckedButton.Click += new System.EventHandler(this.allPriductsCheckedButton_Click);
+            // 
             // RequestReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 261);
+            this.ClientSize = new System.Drawing.Size(566, 261);
+            this.Controls.Add(this.allProductUncheckedButton);
+            this.Controls.Add(this.allPriductsCheckedButton);
+            this.Controls.Add(this.allCustomersUncheckedButton);
+            this.Controls.Add(this.allCustomersCheckedButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -173,5 +221,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button allCustomersCheckedButton;
+        private System.Windows.Forms.Button allCustomersUncheckedButton;
+        private System.Windows.Forms.Button allProductUncheckedButton;
+        private System.Windows.Forms.Button allPriductsCheckedButton;
     }
 }

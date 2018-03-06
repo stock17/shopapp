@@ -129,5 +129,36 @@ namespace shopapp.forms
             this.dateFromTimePicker.Enabled = !box.Checked;
             this.dateToTimePicker.Enabled = !box.Checked;
         }
+
+        private void allCustomersButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < customerCheckedListBox.Items.Count; i++) {
+                customerCheckedListBox.SetItemChecked(i, true);
+            }
+        }
+
+        private void allCustomersUncheckedButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < customerCheckedListBox.Items.Count; i++)
+            {
+                customerCheckedListBox.SetItemChecked(i, false);
+            }
+        }
+
+        private void allPriductsCheckedButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < productCheckedListBox.Items.Count; i++)
+            {
+                productCheckedListBox.SetItemChecked(i, true);
+            }
+        }
+
+        private void allProductUncheckedButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < productCheckedListBox.Items.Count; i++)
+            {
+                productCheckedListBox.SetItemChecked(i, false);
+            }
+        }
     }
 }
