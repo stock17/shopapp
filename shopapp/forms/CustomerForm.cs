@@ -77,7 +77,7 @@ namespace shopapp
             }
 
             string age = ageTextBox.Text;
-            if (ageTextBox.Text == "" || Int32.Parse(age) < 0 || Int32.Parse(age) > 120) {
+            if (ageTextBox.Text == "" || Int32.Parse(age) < Customer.MIN_AGE || Int32.Parse(age) > Customer.MAX_AGE) {
                 MessageBox.Show("Incorrect age");
                 DialogResult = DialogResult.None;
                 return;

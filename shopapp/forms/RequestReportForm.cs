@@ -160,5 +160,29 @@ namespace shopapp.forms
                 productCheckedListBox.SetItemChecked(i, false);
             }
         }
+
+        void ageTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string fromAge = fromAgeTextBox.Text;
+            if (Int32.Parse(fromAge) < Customer.MIN_AGE)
+            {
+                MessageBox.Show("Incorrect age");
+                DialogResult = DialogResult.None;
+                return;
+            }
+
+            string toAge = toAgeTextBox.Text;
+            if (Int32.Parse(toAge) > Customer.MAX_AGE)
+            {
+                MessageBox.Show("Incorrect age");
+                DialogResult = DialogResult.None;
+                return;
+            }
+        }
     }
 }

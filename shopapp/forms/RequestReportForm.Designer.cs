@@ -56,16 +56,20 @@
             // fromAgeTextBox
             // 
             this.fromAgeTextBox.Location = new System.Drawing.Point(71, 173);
+            this.fromAgeTextBox.MaxLength = 3;
             this.fromAgeTextBox.Name = "fromAgeTextBox";
             this.fromAgeTextBox.Size = new System.Drawing.Size(54, 20);
             this.fromAgeTextBox.TabIndex = 1;
+            this.fromAgeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageTextBox_KeyPress);
             // 
             // toAgeTextBox
             // 
             this.toAgeTextBox.Location = new System.Drawing.Point(159, 173);
+            this.toAgeTextBox.MaxLength = 3;
             this.toAgeTextBox.Name = "toAgeTextBox";
             this.toAgeTextBox.Size = new System.Drawing.Size(58, 20);
             this.toAgeTextBox.TabIndex = 2;
+            this.toAgeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageTextBox_KeyPress);
             // 
             // statusCheckedListBox
             // 
@@ -121,6 +125,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "REPORT";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
