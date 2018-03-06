@@ -72,7 +72,7 @@
             this.statusCheckedListBox.FormattingEnabled = true;
             this.statusCheckedListBox.Location = new System.Drawing.Point(33, 200);
             this.statusCheckedListBox.Name = "statusCheckedListBox";
-            this.statusCheckedListBox.Size = new System.Drawing.Size(184, 49);
+            this.statusCheckedListBox.Size = new System.Drawing.Size(184, 64);
             this.statusCheckedListBox.TabIndex = 3;
             // 
             // productCheckedListBox
@@ -80,7 +80,7 @@
             this.productCheckedListBox.FormattingEnabled = true;
             this.productCheckedListBox.Location = new System.Drawing.Point(252, 13);
             this.productCheckedListBox.Name = "productCheckedListBox";
-            this.productCheckedListBox.Size = new System.Drawing.Size(120, 229);
+            this.productCheckedListBox.Size = new System.Drawing.Size(136, 244);
             this.productCheckedListBox.TabIndex = 4;
             // 
             // dateFromTimePicker
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 261);
+            this.ClientSize = new System.Drawing.Size(566, 271);
             this.Controls.Add(this.allProductUncheckedButton);
             this.Controls.Add(this.allPriductsCheckedButton);
             this.Controls.Add(this.allCustomersUncheckedButton);

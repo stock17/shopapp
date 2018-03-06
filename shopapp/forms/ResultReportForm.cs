@@ -20,11 +20,28 @@ namespace shopapp.forms
         }
 
         public void LoadOrderList(List<Order> list)
-        {
+        {           
+            int n = 0;
+
             foreach (Order o in list)
-            {
-                orderListBox.Items.Add(o.Date + " " + o.OrderCustomer.Name);
+            {                
+                ListViewItem lvi = new ListViewItem((++n).ToString());                
+                lvi.SubItems.Add(o.Date.ToString());
+                lvi.SubItems.Add(o.OrderCustomer.Name.ToString());
+                string text = "";
+                for (int i = 0; i < o.ProductList.ProductList.Count; i++)
+                {
+                    text += o.ProductList.ProductList[i].Name + " - ";
+                    text += o.ProductList.QuantityList[i] + " pc ";
+                }
+                lvi.SubItems.Add(text);
+
+                reportListView.Items.Add(lvi);
+                
             }
+
+            reportListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            //yourListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
     }
 }

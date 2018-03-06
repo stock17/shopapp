@@ -61,6 +61,7 @@ namespace shopapp
             this.newButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -304,6 +305,7 @@ namespace shopapp
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Controls.Add(this.fakeBDButton);
             this.tabPage4.ForeColor = System.Drawing.Color.Red;
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -391,6 +393,15 @@ namespace shopapp
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(180, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(228, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Warning! The current database will be deleted.";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +421,7 @@ namespace shopapp
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -448,6 +460,7 @@ namespace shopapp
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox ordersListBox;
         private System.Windows.Forms.Button fakeBDButton;
+        private System.Windows.Forms.Label label2;
     }
 }
 
