@@ -36,6 +36,7 @@ namespace shopapp.model
 
         public void GenerateFakeBD() {
             customerList = FakeBD.GenerateCustomerList();
+            productList = FakeBD.GenerateProductList();
         }
 
         /***************************************************/

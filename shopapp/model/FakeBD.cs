@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shopapp.entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace shopapp.model
     class FakeBD
     {
         public const int CUSTOMER_NUMBER = 50;
+        public const int MAX_PRICE = 50000; // in kopeks
 
         public static readonly string[] MenLastNames = { "Абрамов", "Авдеев", "Агафонов", "Аксёнов", "Александров", "Алексеев",
             "Андреев", "Анисимов", "Антонов", "Артемьев", "Архипов", "Афанасьев", "Баранов", "Белов", "Белозёров", "Белоусов",
@@ -161,6 +163,19 @@ namespace shopapp.model
                     status = Customer.SocialStatus.pensioner;
 
                 list.Add(new Customer(customerFullName, sex, age, (int) status));
+            }
+
+            return list;
+        }
+
+        public static List<Product> GenerateProductList() {
+            List<Product> list = new List<Product>();
+            Random rand = new Random();
+
+            for (int i = 0; i < FakeBD.ProductNames.Count(); i++) {
+                int price = rand.Next(FakeBD.MAX_PRICE);
+                Product p = new entities.Product(FakeBD.ProductNames[i], price);
+                list.Add(p);
             }
 
             return list;
