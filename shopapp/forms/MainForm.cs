@@ -277,5 +277,10 @@ namespace shopapp
                 }
             
         }
+
+        private void fakeBDButton_Click(object sender, EventArgs e)
+        {
+            presenter.OnGenerateFakeBD();
+        }
     }
 }

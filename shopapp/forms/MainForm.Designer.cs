@@ -54,6 +54,7 @@ namespace shopapp
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.ordersListBox = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.fakeBDButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.removeButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@ namespace shopapp
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -302,6 +304,7 @@ namespace shopapp
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.fakeBDButton);
             this.tabPage4.ForeColor = System.Drawing.Color.Red;
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -310,6 +313,16 @@ namespace shopapp
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Testing";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // fakeBDButton
+            // 
+            this.fakeBDButton.Location = new System.Drawing.Point(212, 91);
+            this.fakeBDButton.Name = "fakeBDButton";
+            this.fakeBDButton.Size = new System.Drawing.Size(167, 49);
+            this.fakeBDButton.TabIndex = 0;
+            this.fakeBDButton.Text = "Generate Fake BD";
+            this.fakeBDButton.UseVisualStyleBackColor = true;
+            this.fakeBDButton.Click += new System.EventHandler(this.fakeBDButton_Click);
             // 
             // groupBox1
             // 
@@ -396,6 +409,7 @@ namespace shopapp
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -433,6 +447,7 @@ namespace shopapp
         private System.Windows.Forms.TextBox productNameTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox ordersListBox;
+        private System.Windows.Forms.Button fakeBDButton;
     }
 }
 

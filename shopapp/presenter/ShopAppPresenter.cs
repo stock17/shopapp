@@ -129,6 +129,12 @@ namespace shopapp.presenter
             mainform.ShowReport(orders);
         }
 
+        public void OnGenerateFakeBD()
+        {
+            model.GenerateFakeBD();
+            RefreshMainForm();
+        }
+
 
     }
 }

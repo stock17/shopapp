@@ -34,6 +34,10 @@ namespace shopapp.model
             fileHelper.SaveOrdersToFile(orderList);
         }
 
+        public void GenerateFakeBD() {
+            customerList = FakeBD.GenerateCustomerList();
+        }
+
         /***************************************************/
         /*************  CUSTOMER SECTION  ******************/
         /***************************************************/

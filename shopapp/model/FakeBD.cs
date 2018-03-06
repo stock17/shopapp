@@ -8,6 +8,8 @@ namespace shopapp.model
 {
     class FakeBD
     {
+        public const int CUSTOMER_NUMBER = 50;
+
         public static readonly string[] MenLastNames = { "Абрамов", "Авдеев", "Агафонов", "Аксёнов", "Александров", "Алексеев",
             "Андреев", "Анисимов", "Антонов", "Артемьев", "Архипов", "Афанасьев", "Баранов", "Белов", "Белозёров", "Белоусов",
             "Беляев", "Беляков", "Беспалов", "Бирюков", "Блинов", "Блохин", "Бобров", "Бобылёв", "Богданов", "Большаков",
@@ -123,5 +125,45 @@ namespace shopapp.model
             "Апельсины", "Яблоки", "Мандарины", "Бананы", "Бумага туалетная", "Свечки", "Перчатки рабочие", "Карты игральные",
             "Спички", "Батарейки	", "Салфетки влажные", "Платочки бумажные", "Ватные палочки", "Ватные диски", "Мыло хоз.",
             "Шампунь", "Порошок", "Зажигалки" };
+
+        public static List<Customer> GenerateCustomerList()
+        {
+            List<Customer> list = new List<Customer>();
+            Random rand = new Random();
+
+            for (int i = 0; i < CUSTOMER_NUMBER; i++)
+            {
+                bool sex = rand.Next(2) < 1;
+                string customerName, customerLastName, customerFullName;
+                if (sex)
+                {
+                    customerName = FakeBD.MenNames[rand.Next(FakeBD.MenNames.Count())];
+                    customerLastName = FakeBD.MenLastNames[rand.Next(FakeBD.MenLastNames.Count())];
+                }
+                else
+                {
+                    customerName = FakeBD.WomenNames[rand.Next(FakeBD.WomenNames.Count())];
+                    customerLastName = FakeBD.WomenLastNames[rand.Next(FakeBD.WomenLastNames.Count())];
+                }
+                customerFullName = customerName + " " + customerLastName;
+
+                int age = rand.Next(Customer.MAX_AGE);
+
+                Customer.SocialStatus status;
+
+                if (age < 7)
+                    status = Customer.SocialStatus.unemployed;
+                else if (age >= 7 && age < 22)
+                    status = Customer.SocialStatus.student;
+                else if (age >= 22 && age < 60)
+                    status = Customer.SocialStatus.employee;
+                else 
+                    status = Customer.SocialStatus.pensioner;
+
+                list.Add(new Customer(customerFullName, sex, age, (int) status));
+            }
+
+            return list;
+        }
     }
 }

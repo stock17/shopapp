@@ -12,7 +12,7 @@ namespace shopapp
     {
 
         public static int NextId;        
-        public const int MAX_AGE = 150;
+        public const int MAX_AGE = 100;
         public const int MIN_AGE = 0;
 
         public Customer(string name, bool sex, int age, int status)
