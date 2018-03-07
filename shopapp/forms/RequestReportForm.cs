@@ -169,7 +169,7 @@ namespace shopapp.forms
         private void button1_Click(object sender, EventArgs e)
         {
             string fromAge = fromAgeTextBox.Text;
-            if (Int32.Parse(fromAge) < Customer.MIN_AGE)
+            if (fromAge != "" && Int32.Parse(fromAge) < Customer.MIN_AGE)
             {
                 MessageBox.Show("Incorrect age");
                 DialogResult = DialogResult.None;
@@ -177,7 +177,7 @@ namespace shopapp.forms
             }
 
             string toAge = toAgeTextBox.Text;
-            if (Int32.Parse(toAge) > Customer.MAX_AGE)
+            if (fromAge != "" && Int32.Parse(toAge) > Customer.MAX_AGE)
             {
                 MessageBox.Show("Incorrect age");
                 DialogResult = DialogResult.None;

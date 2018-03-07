@@ -30,7 +30,7 @@ namespace shopapp
         {
             InitializeComponent();
             presenter = new ShopAppPresenter(this);
-            presenter.onStart();
+            presenter.onStart();            
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Drawing;
 
 namespace shopapp
 {
@@ -54,6 +55,7 @@ namespace shopapp
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.ordersListBox = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.fakeBDButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.removeButton = new System.Windows.Forms.Button();
@@ -61,7 +63,6 @@ namespace shopapp
             this.newButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,9 +79,12 @@ namespace shopapp
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 47);
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(558, 265);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabStop = false;
             // 
             // tabPage1
             // 
@@ -316,6 +320,15 @@ namespace shopapp
             this.tabPage4.Text = "Testing";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(180, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(228, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Warning! The current database will be deleted.";
+            // 
             // fakeBDButton
             // 
             this.fakeBDButton.Location = new System.Drawing.Point(212, 91);
@@ -392,15 +405,6 @@ namespace shopapp
             this.saveButton.TabIndex = 3;
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Warning! The current database will be deleted.";
             // 
             // MainForm
             // 
