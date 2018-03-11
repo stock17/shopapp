@@ -48,7 +48,7 @@
             this.reportListView.Location = new System.Drawing.Point(12, 12);
             this.reportListView.MultiSelect = false;
             this.reportListView.Name = "reportListView";
-            this.reportListView.Size = new System.Drawing.Size(702, 237);
+            this.reportListView.Size = new System.Drawing.Size(760, 537);
             this.reportListView.TabIndex = 1;
             this.reportListView.UseCompatibleStateImageBehavior = false;
             this.reportListView.View = System.Windows.Forms.View.Details;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 261);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.reportListView);
             this.Name = "ResultReportForm";
             this.Text = "ResultReportForm";

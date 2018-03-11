@@ -71,6 +71,11 @@ namespace shopapp.forms
         {
             productIndex = ((ComboBox)sender).SelectedIndex;
         }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     
