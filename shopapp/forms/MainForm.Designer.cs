@@ -81,7 +81,7 @@ namespace shopapp
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(558, 265);
+            this.tabControl1.Size = new System.Drawing.Size(984, 540);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             this.tabControl1.TabStop = false;
@@ -103,7 +103,7 @@ namespace shopapp
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(550, 239);
+            this.tabPage1.Size = new System.Drawing.Size(976, 514);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Customers";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -111,99 +111,109 @@ namespace shopapp
             // IdTextBox
             // 
             this.IdTextBox.Enabled = false;
-            this.IdTextBox.Location = new System.Drawing.Point(94, 30);
+            this.IdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IdTextBox.Location = new System.Drawing.Point(137, 21);
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.ReadOnly = true;
-            this.IdTextBox.Size = new System.Drawing.Size(175, 20);
+            this.IdTextBox.Size = new System.Drawing.Size(300, 29);
             this.IdTextBox.TabIndex = 10;
             // 
             // customerIdLabel
             // 
             this.customerIdLabel.AutoSize = true;
-            this.customerIdLabel.Location = new System.Drawing.Point(15, 30);
+            this.customerIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.customerIdLabel.Location = new System.Drawing.Point(25, 27);
             this.customerIdLabel.Name = "customerIdLabel";
-            this.customerIdLabel.Size = new System.Drawing.Size(18, 13);
+            this.customerIdLabel.Size = new System.Drawing.Size(26, 20);
             this.customerIdLabel.TabIndex = 9;
             this.customerIdLabel.Text = "ID";
             // 
             // customersListBox
             // 
             this.customersListBox.FormattingEnabled = true;
-            this.customersListBox.Location = new System.Drawing.Point(329, 30);
+            this.customersListBox.Location = new System.Drawing.Point(482, 21);
             this.customersListBox.Name = "customersListBox";
-            this.customersListBox.Size = new System.Drawing.Size(178, 160);
+            this.customersListBox.Size = new System.Drawing.Size(488, 485);
             this.customersListBox.TabIndex = 8;
             this.customersListBox.SelectedIndexChanged += new System.EventHandler(this.customersListBox_SelectedIndexChanged);
             // 
             // statusTextBox
             // 
             this.statusTextBox.Enabled = false;
-            this.statusTextBox.Location = new System.Drawing.Point(94, 168);
+            this.statusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.statusTextBox.Location = new System.Drawing.Point(137, 221);
             this.statusTextBox.Name = "statusTextBox";
             this.statusTextBox.ReadOnly = true;
-            this.statusTextBox.Size = new System.Drawing.Size(175, 20);
+            this.statusTextBox.Size = new System.Drawing.Size(300, 29);
             this.statusTextBox.TabIndex = 7;
             // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(15, 168);
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.statusLabel.Location = new System.Drawing.Point(25, 227);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(67, 13);
+            this.statusLabel.Size = new System.Drawing.Size(100, 20);
             this.statusLabel.TabIndex = 6;
             this.statusLabel.Text = "Social status";
             // 
             // ageTextBox
             // 
             this.ageTextBox.Enabled = false;
-            this.ageTextBox.Location = new System.Drawing.Point(94, 134);
+            this.ageTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ageTextBox.Location = new System.Drawing.Point(137, 171);
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.ReadOnly = true;
-            this.ageTextBox.Size = new System.Drawing.Size(175, 20);
+            this.ageTextBox.Size = new System.Drawing.Size(300, 29);
             this.ageTextBox.TabIndex = 5;
             // 
             // ageLabel
             // 
             this.ageLabel.AutoSize = true;
-            this.ageLabel.Location = new System.Drawing.Point(15, 134);
+            this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ageLabel.Location = new System.Drawing.Point(25, 177);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(26, 13);
+            this.ageLabel.Size = new System.Drawing.Size(38, 20);
             this.ageLabel.TabIndex = 4;
             this.ageLabel.Text = "Age";
             // 
             // sexTextBox
             // 
             this.sexTextBox.Enabled = false;
-            this.sexTextBox.Location = new System.Drawing.Point(94, 100);
+            this.sexTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexTextBox.Location = new System.Drawing.Point(137, 121);
             this.sexTextBox.Name = "sexTextBox";
             this.sexTextBox.ReadOnly = true;
-            this.sexTextBox.Size = new System.Drawing.Size(175, 20);
+            this.sexTextBox.Size = new System.Drawing.Size(300, 29);
             this.sexTextBox.TabIndex = 3;
             // 
             // sexLabel
             // 
             this.sexLabel.AutoSize = true;
-            this.sexLabel.Location = new System.Drawing.Point(15, 103);
+            this.sexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexLabel.Location = new System.Drawing.Point(25, 127);
             this.sexLabel.Name = "sexLabel";
-            this.sexLabel.Size = new System.Drawing.Size(25, 13);
+            this.sexLabel.Size = new System.Drawing.Size(36, 20);
             this.sexLabel.TabIndex = 2;
             this.sexLabel.Text = "Sex";
             // 
             // nameTextBox
             // 
             this.nameTextBox.Enabled = false;
-            this.nameTextBox.Location = new System.Drawing.Point(94, 68);
+            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTextBox.Location = new System.Drawing.Point(137, 71);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.ReadOnly = true;
-            this.nameTextBox.Size = new System.Drawing.Size(175, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(300, 29);
             this.nameTextBox.TabIndex = 1;
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(15, 71);
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Location = new System.Drawing.Point(25, 77);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.Size = new System.Drawing.Size(51, 20);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Name";
             // 
@@ -219,7 +229,7 @@ namespace shopapp
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(550, 239);
+            this.tabPage2.Size = new System.Drawing.Size(976, 514);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Products";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -227,63 +237,69 @@ namespace shopapp
             // productIdTextBox
             // 
             this.productIdTextBox.Enabled = false;
-            this.productIdTextBox.Location = new System.Drawing.Point(108, 39);
+            this.productIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.productIdTextBox.Location = new System.Drawing.Point(137, 21);
             this.productIdTextBox.Name = "productIdTextBox";
             this.productIdTextBox.ReadOnly = true;
-            this.productIdTextBox.Size = new System.Drawing.Size(175, 20);
+            this.productIdTextBox.Size = new System.Drawing.Size(300, 29);
             this.productIdTextBox.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 39);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(29, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "ID";
             // 
             // productsListBox
             // 
             this.productsListBox.FormattingEnabled = true;
-            this.productsListBox.Location = new System.Drawing.Point(343, 39);
+            this.productsListBox.Location = new System.Drawing.Point(482, 21);
             this.productsListBox.Name = "productsListBox";
-            this.productsListBox.Size = new System.Drawing.Size(178, 160);
+            this.productsListBox.Size = new System.Drawing.Size(488, 485);
             this.productsListBox.TabIndex = 19;
             this.productsListBox.SelectedIndexChanged += new System.EventHandler(this.productsListBox_SelectedIndexChanged);
             // 
             // productPriceTextBox
             // 
             this.productPriceTextBox.Enabled = false;
-            this.productPriceTextBox.Location = new System.Drawing.Point(108, 109);
+            this.productPriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.productPriceTextBox.Location = new System.Drawing.Point(137, 121);
             this.productPriceTextBox.Name = "productPriceTextBox";
             this.productPriceTextBox.ReadOnly = true;
-            this.productPriceTextBox.Size = new System.Drawing.Size(175, 20);
+            this.productPriceTextBox.Size = new System.Drawing.Size(300, 29);
             this.productPriceTextBox.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 112);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(29, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Price";
             // 
             // productNameTextBox
             // 
             this.productNameTextBox.Enabled = false;
-            this.productNameTextBox.Location = new System.Drawing.Point(108, 77);
+            this.productNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.productNameTextBox.Location = new System.Drawing.Point(137, 71);
             this.productNameTextBox.Name = "productNameTextBox";
             this.productNameTextBox.ReadOnly = true;
-            this.productNameTextBox.Size = new System.Drawing.Size(175, 20);
+            this.productNameTextBox.Size = new System.Drawing.Size(300, 29);
             this.productNameTextBox.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 80);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(29, 77);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Name";
             // 
@@ -293,7 +309,7 @@ namespace shopapp
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(550, 239);
+            this.tabPage3.Size = new System.Drawing.Size(976, 514);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Orders";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -301,9 +317,9 @@ namespace shopapp
             // ordersListBox
             // 
             this.ordersListBox.FormattingEnabled = true;
-            this.ordersListBox.Location = new System.Drawing.Point(31, 18);
+            this.ordersListBox.Location = new System.Drawing.Point(6, 5);
             this.ordersListBox.Name = "ordersListBox";
-            this.ordersListBox.Size = new System.Drawing.Size(489, 199);
+            this.ordersListBox.Size = new System.Drawing.Size(964, 498);
             this.ordersListBox.TabIndex = 0;
             this.ordersListBox.SelectedIndexChanged += new System.EventHandler(this.ordersListBox_SelectedIndexChanged);
             // 
@@ -315,7 +331,7 @@ namespace shopapp
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(550, 239);
+            this.tabPage4.Size = new System.Drawing.Size(976, 514);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Testing";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -344,17 +360,18 @@ namespace shopapp
             this.groupBox1.Controls.Add(this.removeButton);
             this.groupBox1.Controls.Add(this.editButton);
             this.groupBox1.Controls.Add(this.newButton);
-            this.groupBox1.Location = new System.Drawing.Point(16, 318);
+            this.groupBox1.Location = new System.Drawing.Point(16, 617);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(425, 40);
+            this.groupBox1.Size = new System.Drawing.Size(796, 100);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(212, 11);
+            this.removeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.removeButton.Location = new System.Drawing.Point(571, 25);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(75, 23);
+            this.removeButton.Size = new System.Drawing.Size(150, 50);
             this.removeButton.TabIndex = 2;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = true;
@@ -362,9 +379,10 @@ namespace shopapp
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(114, 11);
+            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editButton.Location = new System.Drawing.Point(316, 25);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(75, 23);
+            this.editButton.Size = new System.Drawing.Size(150, 50);
             this.editButton.TabIndex = 1;
             this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = true;
@@ -372,9 +390,10 @@ namespace shopapp
             // 
             // newButton
             // 
-            this.newButton.Location = new System.Drawing.Point(18, 11);
+            this.newButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newButton.Location = new System.Drawing.Point(48, 25);
             this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(75, 23);
+            this.newButton.Size = new System.Drawing.Size(150, 50);
             this.newButton.TabIndex = 0;
             this.newButton.Text = "New";
             this.newButton.UseVisualStyleBackColor = true;
@@ -382,9 +401,10 @@ namespace shopapp
             // 
             // reportButton
             // 
-            this.reportButton.Location = new System.Drawing.Point(468, 329);
+            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reportButton.Location = new System.Drawing.Point(846, 617);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(97, 38);
+            this.reportButton.Size = new System.Drawing.Size(150, 100);
             this.reportButton.TabIndex = 2;
             this.reportButton.Text = "Make report";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -410,7 +430,7 @@ namespace shopapp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 375);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.groupBox1);
