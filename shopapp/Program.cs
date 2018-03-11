@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shopapp.localization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +17,10 @@ namespace shopapp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainForm mainform = new MainForm();            
 
+            LanguageSettings.CurrentLanguage = LanguageSettings.ENGLISH;
+
+            MainForm mainform = new MainForm();            
             Application.Run(mainform);     
             
         }

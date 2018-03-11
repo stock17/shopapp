@@ -96,6 +96,8 @@
     <Compile Include="forms\ResultReportForm.Designer.cs">
       <DependentUpon>ResultReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="localization\ILanguageChangeable.cs" />
+    <Compile Include="localization\LanguageSettings.cs" />
     <Compile Include="model\FakeBD.cs" />
     <Compile Include="model\FileHelper.cs" />
     <Compile Include="model\ShopAppModel.cs" />
@@ -104,6 +106,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MainForm.ru.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>

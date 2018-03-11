@@ -1,11 +1,13 @@
 ﻿using shopapp.entities;
 using shopapp.forms;
+using shopapp.localization;
 using shopapp.presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +15,7 @@ using System.Windows.Forms;
 
 namespace shopapp
 {
-    public partial class MainForm : Form, ShopAppPresenter.IMainForm
+    public partial class MainForm : Form, ShopAppPresenter.IMainForm, ILanguageChangeable
     {
         private ShopAppPresenter presenter;
 
@@ -35,7 +37,7 @@ namespace shopapp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ChangeFormLanguage(LanguageSettings.CurrentLanguage);
         }
                
 
@@ -282,6 +284,37 @@ namespace shopapp
         {
             presenter.OnGenerateFakeBD();
             EnableSave();
+        }
+
+        public void ChangeFormLanguage(string newLocalization)
+        {
+            var resources = new ComponentResourceManager(this.GetType());
+            CultureInfo newCultureInfo = new CultureInfo(newLocalization);
+
+            foreach (Control c in this.Controls)
+            {
+                resources.ApplyResources(c, c.Name, newCultureInfo);
+            }
+
+            resources.ApplyResources(this, "$this", newCultureInfo);
+        }
+
+        
+
+
+
+        private void changeLanguageButton_Click(object sender, EventArgs e)
+        {
+            if (LanguageSettings.CurrentLanguage.Equals(LanguageSettings.ENGLISH))
+            {
+                LanguageSettings.CurrentLanguage = LanguageSettings.RUSSIAN;
+            }
+            else
+            {
+                LanguageSettings.CurrentLanguage = LanguageSettings.ENGLISH;
+            }
+
+            ChangeFormLanguage(LanguageSettings.CurrentLanguage);
         }
     }
 }
