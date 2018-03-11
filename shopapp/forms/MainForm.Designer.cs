@@ -77,6 +77,7 @@ namespace shopapp
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControl1.Location = new System.Drawing.Point(12, 47);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -99,11 +100,12 @@ namespace shopapp
             this.tabPage1.Controls.Add(this.sexLabel);
             this.tabPage1.Controls.Add(this.nameTextBox);
             this.tabPage1.Controls.Add(this.nameLabel);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(976, 514);
+            this.tabPage1.Size = new System.Drawing.Size(976, 511);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Customers";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -130,10 +132,12 @@ namespace shopapp
             // 
             // customersListBox
             // 
+            this.customersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.customersListBox.FormattingEnabled = true;
+            this.customersListBox.ItemHeight = 16;
             this.customersListBox.Location = new System.Drawing.Point(482, 21);
             this.customersListBox.Name = "customersListBox";
-            this.customersListBox.Size = new System.Drawing.Size(488, 485);
+            this.customersListBox.Size = new System.Drawing.Size(488, 468);
             this.customersListBox.TabIndex = 8;
             this.customersListBox.SelectedIndexChanged += new System.EventHandler(this.customersListBox_SelectedIndexChanged);
             // 
@@ -226,10 +230,10 @@ namespace shopapp
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.productNameTextBox);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(976, 514);
+            this.tabPage2.Size = new System.Drawing.Size(976, 507);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Products";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -248,7 +252,7 @@ namespace shopapp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(29, 27);
+            this.label1.Location = new System.Drawing.Point(25, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 20;
@@ -256,10 +260,12 @@ namespace shopapp
             // 
             // productsListBox
             // 
+            this.productsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.productsListBox.FormattingEnabled = true;
+            this.productsListBox.ItemHeight = 16;
             this.productsListBox.Location = new System.Drawing.Point(482, 21);
             this.productsListBox.Name = "productsListBox";
-            this.productsListBox.Size = new System.Drawing.Size(488, 485);
+            this.productsListBox.Size = new System.Drawing.Size(488, 468);
             this.productsListBox.TabIndex = 19;
             this.productsListBox.SelectedIndexChanged += new System.EventHandler(this.productsListBox_SelectedIndexChanged);
             // 
@@ -277,7 +283,7 @@ namespace shopapp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(29, 129);
+            this.label4.Location = new System.Drawing.Point(25, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 13;
@@ -297,7 +303,7 @@ namespace shopapp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(29, 77);
+            this.label5.Location = new System.Drawing.Point(25, 77);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 11;
@@ -306,10 +312,10 @@ namespace shopapp
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.ordersListBox);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(976, 514);
+            this.tabPage3.Size = new System.Drawing.Size(976, 511);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Orders";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -317,9 +323,10 @@ namespace shopapp
             // ordersListBox
             // 
             this.ordersListBox.FormattingEnabled = true;
+            this.ordersListBox.ItemHeight = 16;
             this.ordersListBox.Location = new System.Drawing.Point(6, 5);
             this.ordersListBox.Name = "ordersListBox";
-            this.ordersListBox.Size = new System.Drawing.Size(964, 498);
+            this.ordersListBox.Size = new System.Drawing.Size(964, 500);
             this.ordersListBox.TabIndex = 0;
             this.ordersListBox.SelectedIndexChanged += new System.EventHandler(this.ordersListBox_SelectedIndexChanged);
             // 
@@ -328,10 +335,10 @@ namespace shopapp
             this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Controls.Add(this.fakeBDButton);
             this.tabPage4.ForeColor = System.Drawing.Color.Red;
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(976, 514);
+            this.tabPage4.Size = new System.Drawing.Size(976, 511);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Testing";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -339,15 +346,15 @@ namespace shopapp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 156);
+            this.label2.Location = new System.Drawing.Point(355, 303);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 13);
+            this.label2.Size = new System.Drawing.Size(302, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Warning! The current database will be deleted.";
             // 
             // fakeBDButton
             // 
-            this.fakeBDButton.Location = new System.Drawing.Point(212, 91);
+            this.fakeBDButton.Location = new System.Drawing.Point(415, 234);
             this.fakeBDButton.Name = "fakeBDButton";
             this.fakeBDButton.Size = new System.Drawing.Size(167, 49);
             this.fakeBDButton.TabIndex = 0;

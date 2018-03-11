@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -51,7 +52,8 @@ namespace shopapp
             get {
                 //string text = Regex.Replace(this.priceTextBox.Text, @"[.,]", "");
                 string text = this.priceTextBox.Text;
-                return (Decimal)Double.Parse(text) * 100;
+                double dPrice = double.Parse(text, CultureInfo.InvariantCulture);
+                return (Decimal) (dPrice  * 100);
             }
             set {
                 this.price = value;
