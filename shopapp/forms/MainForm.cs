@@ -286,6 +286,7 @@ namespace shopapp
             EnableSave();
         }
 
+        // TODO Rewrite with recursion
         public void ChangeFormLanguage(string newLocalization)
         {
             var resources = new ComponentResourceManager(this.GetType());
@@ -294,6 +295,18 @@ namespace shopapp
             foreach (Control c in this.Controls)
             {
                 resources.ApplyResources(c, c.Name, newCultureInfo);
+                if (c.Controls.Count != 0)
+                {
+                    foreach (Control c1 in c.Controls)
+                    {
+                        resources.ApplyResources(c1, c1.Name, newCultureInfo);
+                        if (c1.Controls.Count != 0) {
+                            foreach (Control c2 in c1.Controls) {
+                                resources.ApplyResources(c2, c2.Name, newCultureInfo);
+                            }
+                        }
+                    }
+                }                
             }
 
             resources.ApplyResources(this, "$this", newCultureInfo);

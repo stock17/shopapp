@@ -120,12 +120,9 @@
   <data name="newButton.Text" xml:space="preserve">
     <value>New</value>
   </data>
-  <data name="&gt;&gt;newButton.Name" xml:space="preserve">
-    <value>newButton</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="productPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 121</value>
+  <data name="customerIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 20</value>
   </data>
   <data name="ageTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
@@ -133,24 +130,21 @@
   <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="removeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
+  <data name="&gt;&gt;reportButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Orders</value>
   </data>
   <data name="changeLanguageButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
   </data>
   <data name="productsListBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -164,8 +158,14 @@
   <data name="changeLanguageButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="IdTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
   <data name="&gt;&gt;customerIdLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -176,20 +176,20 @@
   <data name="reportButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 100</value>
   </data>
-  <data name="&gt;&gt;removeButton.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="&gt;&gt;productPriceTextBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="removeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="sexLabel.Text" xml:space="preserve">
     <value>Sex</value>
   </data>
-  <data name="editButton.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="changeLanguageButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 1</value>
   </data>
   <data name="&gt;&gt;changeLanguageButton.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -203,24 +203,24 @@
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;IdTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 511</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabControl1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
   <data name="nameTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="saveButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="editButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>302, 17</value>
+  </data>
+  <data name="&gt;&gt;editButton.Name" xml:space="preserve">
+    <value>editButton</value>
   </data>
   <data name="&gt;&gt;IdTextBox.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -228,20 +228,20 @@
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
   </data>
-  <data name="&gt;&gt;statusTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="customerIdLabel.Text" xml:space="preserve">
+    <value>ID</value>
   </data>
   <data name="productPriceTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;ageTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="sexLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="saveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="removeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -264,20 +264,20 @@
   <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 511</value>
-  </data>
-  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
   </data>
   <data name="customerIdLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="&gt;&gt;productIdTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="sexTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="sexLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="IdTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
     <value>tabPage2</value>
@@ -288,8 +288,8 @@
   <data name="&gt;&gt;productIdTextBox.Name" xml:space="preserve">
     <value>productIdTextBox</value>
   </data>
-  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -303,8 +303,8 @@
   <data name="&gt;&gt;sexLabel.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="IdTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>976, 511</value>
   </data>
   <data name="&gt;&gt;productPriceTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -312,20 +312,17 @@
   <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;sexLabel.Name" xml:space="preserve">
-    <value>sexLabel</value>
+  <data name="editButton.Text" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="ageLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 20</value>
   </data>
-  <data name="statusLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
-  <data name="productNameTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;newButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="saveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -336,17 +333,17 @@
   <data name="&gt;&gt;sexTextBox.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="fakeBDButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 49</value>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="&gt;&gt;ageTextBox.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
+  <data name="removeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
   <data name="newButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 50</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Orders</value>
   </data>
   <data name="&gt;&gt;customersListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -381,11 +378,11 @@
   <data name="&gt;&gt;productIdTextBox.Parent" xml:space="preserve">
     <value>tabPage2</value>
   </data>
-  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;editButton.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="IdTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 29</value>
+  <data name="productNameTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;removeButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -393,11 +390,11 @@
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>tabPage2</value>
   </data>
-  <data name="productPriceTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;productNameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;fakeBDButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ageLabel.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -423,8 +420,8 @@
   <data name="ageLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="customerIdLabel.Text" xml:space="preserve">
-    <value>ID</value>
+  <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="&gt;&gt;reportButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -432,8 +429,8 @@
   <data name="tabPage4.Text" xml:space="preserve">
     <value>Testing</value>
   </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
+  <data name="&gt;&gt;newButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;productsListBox.Name" xml:space="preserve">
     <value>productsListBox</value>
@@ -441,26 +438,29 @@
   <data name="&gt;&gt;ageTextBox.Name" xml:space="preserve">
     <value>ageTextBox</value>
   </data>
+  <data name="customerIdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 27</value>
+  </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
   <data name="ageLabel.Text" xml:space="preserve">
     <value>Age</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
   </data>
-  <data name="fakeBDButton.Text" xml:space="preserve">
-    <value>Generate Fake BD</value>
+  <data name="&gt;&gt;saveButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;productsListBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+  <data name="productNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="IdTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="changeLanguageButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 1</value>
   </data>
   <data name="&gt;&gt;statusLabel.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -471,8 +471,8 @@
   <data name="&gt;&gt;productNameTextBox.Name" xml:space="preserve">
     <value>productNameTextBox</value>
   </data>
-  <data name="removeButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  <data name="&gt;&gt;productsListBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
   </data>
   <data name="productNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 29</value>
@@ -480,14 +480,11 @@
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;editButton.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
   </data>
-  <data name="editButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="statusTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 221</value>
+  <data name="&gt;&gt;statusTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -495,41 +492,35 @@
   <data name="sexLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;productPriceTextBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>976, 511</value>
   </data>
-  <data name="saveButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;editButton.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControl1</value>
+  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;editButton.Name" xml:space="preserve">
-    <value>editButton</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
+  <data name="&gt;&gt;ordersListBox.Name" xml:space="preserve">
+    <value>ordersListBox</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;removeButton.Name" xml:space="preserve">
-    <value>removeButton</value>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;sexTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;customersListBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="ordersListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 5</value>
+  </data>
+  <data name="productPriceTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -537,8 +528,8 @@
   <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 20</value>
+  <data name="&gt;&gt;fakeBDButton.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
     <value>976, 511</value>
@@ -549,6 +540,9 @@
   <data name="ageTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 29</value>
   </data>
+  <data name="&gt;&gt;ordersListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 20</value>
   </data>
@@ -558,14 +552,17 @@
   <data name="productsListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>482, 21</value>
   </data>
+  <data name="ageTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 171</value>
+  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 77</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>tabPage4</value>
@@ -588,8 +585,8 @@
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;fakeBDButton.Parent" xml:space="preserve">
-    <value>tabPage4</value>
+  <data name="fakeBDButton.Text" xml:space="preserve">
+    <value>Generate Fake BD</value>
   </data>
   <data name="productPriceTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -600,14 +597,14 @@
   <data name="reportButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;reportButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;statusTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;productIdTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="newButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 25</value>
-  </data>
-  <data name="removeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;ageLabel.Name" xml:space="preserve">
     <value>ageLabel</value>
@@ -615,17 +612,23 @@
   <data name="editButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 50</value>
   </data>
-  <data name="statusTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 540</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;ageLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
-  <data name="IdTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="productPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 121</value>
+  </data>
+  <data name="statusTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 221</value>
   </data>
   <data name="newButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
@@ -645,9 +648,6 @@
   <data name="ordersListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>964, 500</value>
   </data>
-  <data name="statusLabel.Text" xml:space="preserve">
-    <value>Social status</value>
-  </data>
   <data name="&gt;&gt;IdTextBox.Name" xml:space="preserve">
     <value>IdTextBox</value>
   </data>
@@ -666,11 +666,8 @@
   <data name="&gt;&gt;productsListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Products</value>
   </data>
   <data name="productsListBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -687,11 +684,11 @@
   <data name="customersListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
+  <data name="customersListBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="productIdTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;reportButton.Name" xml:space="preserve">
     <value>reportButton</value>
@@ -699,11 +696,8 @@
   <data name="&gt;&gt;ageLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;editButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="productIdTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+  <data name="productsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 468</value>
   </data>
   <data name="&gt;&gt;IdTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -711,8 +705,11 @@
   <data name="nameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 29</value>
   </data>
-  <data name="statusTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 29</value>
+  <data name="statusTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="editButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="ageTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -720,8 +717,11 @@
   <data name="changeLanguageButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;productsListBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="editButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -732,17 +732,17 @@
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
     <value>saveButton</value>
   </data>
-  <data name="&gt;&gt;ordersListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;removeButton.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;fakeBDButton.Parent" xml:space="preserve">
+    <value>tabPage4</value>
   </data>
   <data name="&gt;&gt;customersListBox.Name" xml:space="preserve">
     <value>customersListBox</value>
@@ -753,8 +753,8 @@
   <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
     <value>nameLabel</value>
   </data>
-  <data name="&gt;&gt;nameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="IdTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -765,17 +765,11 @@
   <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 1</value>
+  <data name="&gt;&gt;changeLanguageButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Warning! The current database will be deleted.</value>
-  </data>
-  <data name="newButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;reportButton.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -783,11 +777,14 @@
   <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
     <value>976, 511</value>
   </data>
-  <data name="&gt;&gt;fakeBDButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;sexLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="reportButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;reportButton.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;sexLabel.Name" xml:space="preserve">
+    <value>sexLabel</value>
   </data>
   <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -795,14 +792,11 @@
   <data name="&gt;&gt;customerIdLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;sexLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fakeBDButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 49</value>
   </data>
-  <data name="ageTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;changeLanguageButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Customers</value>
@@ -810,26 +804,20 @@
   <data name="customersListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>482, 21</value>
   </data>
-  <data name="&gt;&gt;saveButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="fakeBDButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;productIdTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 20</value>
   </data>
   <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="ageLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 177</value>
-  </data>
   <data name="statusLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 227</value>
   </data>
-  <data name="&gt;&gt;statusLabel.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="productIdTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="changeLanguageButton.Text" xml:space="preserve">
     <value>ENG</value>
@@ -840,8 +828,8 @@
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="customersListBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="&gt;&gt;ageTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;nameTextBox.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -852,14 +840,20 @@
   <data name="&gt;&gt;productNameTextBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;fakeBDButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;newButton.Name" xml:space="preserve">
+    <value>newButton</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
   <data name="customerIdLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="&gt;&gt;customerIdLabel.Name" xml:space="preserve">
     <value>customerIdLabel</value>
+  </data>
+  <data name="IdTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 29</value>
   </data>
   <data name="customersListBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -882,29 +876,29 @@
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>355, 303</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="customerIdLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
   </data>
-  <data name="&gt;&gt;statusTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="statusLabel.Text" xml:space="preserve">
+    <value>Social status</value>
   </data>
   <data name="&gt;&gt;customersListBox.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;ageTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="sexTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 25</value>
+  <data name="saveButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1008, 729</value>
@@ -912,20 +906,20 @@
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="productsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>488, 468</value>
+  <data name="&gt;&gt;removeButton.Name" xml:space="preserve">
+    <value>removeButton</value>
   </data>
-  <data name="ageTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 171</value>
+  <data name="reportButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="changeLanguageButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="&gt;&gt;IdTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 177</value>
   </data>
-  <data name="&gt;&gt;ageTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;customersListBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
     <value>tabPage4</value>
@@ -945,14 +939,14 @@
   <data name="&gt;&gt;changeLanguageButton.Name" xml:space="preserve">
     <value>changeLanguageButton</value>
   </data>
-  <data name="productNameTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+  <data name="statusTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 29</value>
   </data>
   <data name="ordersListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;nameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 71</value>
@@ -962,6 +956,9 @@
   </data>
   <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
+  </data>
+  <data name="productNameTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="editButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>316, 25</value>
@@ -975,17 +972,20 @@
   <data name="ageLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="ageTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;removeButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>984, 540</value>
+  <data name="&gt;&gt;productNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;productPriceTextBox.Name" xml:space="preserve">
     <value>productPriceTextBox</value>
   </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="customerIdLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;newButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -993,32 +993,29 @@
   <data name="&gt;&gt;ordersListBox.Parent" xml:space="preserve">
     <value>tabPage3</value>
   </data>
-  <data name="fakeBDButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 234</value>
-  </data>
   <data name="nameTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="&gt;&gt;newButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <data name="fakeBDButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 234</value>
   </data>
-  <data name="tabControl1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
+  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 1</value>
   </data>
-  <data name="&gt;&gt;ordersListBox.Name" xml:space="preserve">
-    <value>ordersListBox</value>
+  <data name="statusLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="&gt;&gt;ordersListBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="customerIdLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 27</value>
-  </data>
   <data name="&gt;&gt;sexTextBox.Name" xml:space="preserve">
     <value>sexTextBox</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 617</value>
@@ -1026,26 +1023,29 @@
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 27</value>
   </data>
-  <data name="customerIdLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 20</value>
+  <data name="productIdTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;statusLabel.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
   <data name="productIdTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="&gt;&gt;productIdTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Price</value>
+  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>571, 25</value>
   </data>
   <data name="&gt;&gt;changeLanguageButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Products</value>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="productNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="newButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
