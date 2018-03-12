@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.productNameTextBox = new System.Windows.Forms.TextBox();
@@ -38,69 +39,54 @@
             // 
             // button2
             // 
+            resources.ApplyResources(this.button2, "button2");
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(194, 78);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            resources.ApplyResources(this.button1, "button1");
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(19, 79);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // productNameTextBox
             // 
-            this.productNameTextBox.Enabled = false;
-            this.productNameTextBox.Location = new System.Drawing.Point(18, 21);
+            resources.ApplyResources(this.productNameTextBox, "productNameTextBox");
             this.productNameTextBox.Name = "productNameTextBox";
-            this.productNameTextBox.Size = new System.Drawing.Size(192, 20);
-            this.productNameTextBox.TabIndex = 34;
             // 
             // quantityTextBox
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(220, 50);
+            resources.ApplyResources(this.quantityTextBox, "quantityTextBox");
             this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(49, 20);
-            this.quantityTextBox.TabIndex = 28;
             // 
             // nameLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(15, 50);
+            resources.ApplyResources(this.nameLabel, "nameLabel");
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(46, 13);
-            this.nameLabel.TabIndex = 27;
-            this.nameLabel.Text = "Quantity";
             // 
             // productPriceTextBox
             // 
-            this.productPriceTextBox.Enabled = false;
-            this.productPriceTextBox.Location = new System.Drawing.Point(220, 21);
+            resources.ApplyResources(this.productPriceTextBox, "productPriceTextBox");
             this.productPriceTextBox.Name = "productPriceTextBox";
-            this.productPriceTextBox.Size = new System.Drawing.Size(49, 20);
-            this.productPriceTextBox.TabIndex = 37;
             // 
             // AddProductForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 113);
+            this.CancelButton = this.button2;
             this.Controls.Add(this.productPriceTextBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.productNameTextBox);
             this.Controls.Add(this.quantityTextBox);
             this.Controls.Add(this.nameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddProductForm";
-            this.Text = "AddProductForm";
+            this.Load += new System.EventHandler(this.AddProductForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

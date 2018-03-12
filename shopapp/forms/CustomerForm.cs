@@ -1,8 +1,10 @@
-﻿using System;
+﻿using shopapp.localization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +12,7 @@ using System.Windows.Forms;
 
 namespace shopapp
 {
-    public partial class EditCustomerForm : Form
+    public partial class EditCustomerForm : Form, ILanguageChangeable
     {
         public EditCustomerForm()
         {
@@ -100,6 +102,22 @@ namespace shopapp
             return Name;
         }
 
-        
+        private void EditCustomerForm_Load(object sender, EventArgs e)
+        {
+            ChangeFormLanguage(LanguageSettings.CurrentLanguage);
+        }
+
+        public void ChangeFormLanguage(string newLocalization)
+        {
+            var resources = new ComponentResourceManager(this.GetType());
+            CultureInfo newCultureInfo = new CultureInfo(newLocalization);
+
+            foreach (Control c in this.Controls)
+            {
+                resources.ApplyResources(c, c.Name, newCultureInfo);               
+            }
+
+            resources.ApplyResources(this, "$this", newCultureInfo);
+        }
     }
 }

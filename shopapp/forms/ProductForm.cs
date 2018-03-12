@@ -1,4 +1,5 @@
 ﻿using shopapp.entities;
+using shopapp.localization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace shopapp
 {
-    public partial class ProductForm : Form
+    public partial class ProductForm : Form, ILanguageChangeable
     {
         public ProductForm()
         {
@@ -104,5 +105,23 @@ namespace shopapp
         }
 
 
+
+        public void ChangeFormLanguage(string newLocalization)
+        {
+            var resources = new ComponentResourceManager(this.GetType());
+            CultureInfo newCultureInfo = new CultureInfo(newLocalization);
+
+            foreach (Control c in this.Controls)
+            {
+                resources.ApplyResources(c, c.Name, newCultureInfo);
+            }
+
+            resources.ApplyResources(this, "$this", newCultureInfo);
+        }
+
+        private void ProductForm_Load(object sender, EventArgs e)
+        {
+            ChangeFormLanguage(LanguageSettings.CurrentLanguage);   
+        }
     }
 }

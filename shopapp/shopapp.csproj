@@ -107,10 +107,19 @@
     <EmbeddedResource Include="forms\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\AddProductForm.ru.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\CustomerForm.ru.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.ru.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\OrderForm.ru.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\ProductForm.resx">
@@ -122,7 +131,13 @@
     <EmbeddedResource Include="forms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\ProductForm.ru.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\RequestReportForm.resx">
+      <DependentUpon>RequestReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\RequestReportForm.ru.resx">
       <DependentUpon>RequestReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\ResultReportForm.resx">

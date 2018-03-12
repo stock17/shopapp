@@ -1,10 +1,12 @@
 ﻿using shopapp.entities;
+using shopapp.localization;
 using shopapp.presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +14,7 @@ using System.Windows.Forms;
 
 namespace shopapp.forms
 {
-    public partial class RequestReportForm : Form
+    public partial class RequestReportForm : Form, ILanguageChangeable
     {
         ShopAppPresenter Presenter;
         List<Product> ProductList;
@@ -28,6 +30,8 @@ namespace shopapp.forms
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
+            ChangeFormLanguage(LanguageSettings.CurrentLanguage);
+
             this.customerCheckedListBox.DataSource = CustomerList.Select(c => c.Name).ToList();
             this.statusCheckedListBox.DataSource = Enum.GetValues(typeof(Customer.SocialStatus));
             for (int i = 0; i < this.statusCheckedListBox.Items.Count; i++)
@@ -184,5 +188,19 @@ namespace shopapp.forms
                 return;
             }
         }
-    }
+
+        public void ChangeFormLanguage(string newLocalization)
+        {
+            var resources = new ComponentResourceManager(this.GetType());
+            CultureInfo newCultureInfo = new CultureInfo(newLocalization);
+
+            foreach (Control c in this.Controls)
+            {
+                resources.ApplyResources(c, c.Name, newCultureInfo);
+            }
+
+            resources.ApplyResources(this, "$this", newCultureInfo);
+        }
+
+     }
 }
