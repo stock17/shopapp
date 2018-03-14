@@ -13,9 +13,12 @@ namespace shopapp.forms
 {
     public partial class ResultReportForm : Form
     {
+        List<Order> currentOrderList;
+
         public ResultReportForm(List<Order> list)
         {
             InitializeComponent();
+            currentOrderList = list;
             LoadOrderList(list);
         }
 
@@ -43,5 +46,40 @@ namespace shopapp.forms
             reportListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             //yourListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();            
+            saveFileDialog1.Title = "Save to File";
+            saveFileDialog1.Filter = "Text|*.txt";
+            saveFileDialog1.ShowDialog();
+            string fileName = saveFileDialog1.FileName;
+            string text = GetTextForFile();
+
+            if (fileName != "")
+            {
+                System.IO.File.WriteAllText(fileName, text);;
+            }
+        }
+
+        private string GetTextForFile()
+        {
+            string result = "";
+            foreach (Order o in currentOrderList)
+            {
+                string line = o.Date.ToString() + " : ";
+                line += o.OrderCustomer.Name.ToString() + " : ";                
+                for (int i = 0; i < o.ProductList.ProductList.Count; i++)
+                {
+                    line += o.ProductList.ProductList[i].Name + " - ";
+                    line += o.ProductList.QuantityList[i] + " pc ";
+                }
+                line += System.Environment.NewLine;
+                result += line;
+            }
+
+            return result;
+        }
     }
+    
 }
