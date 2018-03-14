@@ -181,7 +181,7 @@ namespace shopapp.forms
             }
 
             string toAge = toAgeTextBox.Text;
-            if (fromAge != "" && Int32.Parse(toAge) > Customer.MAX_AGE)
+            if (toAge != "" && Int32.Parse(toAge) > Customer.MAX_AGE)
             {
                 MessageBox.Show("Incorrect age");
                 DialogResult = DialogResult.None;
