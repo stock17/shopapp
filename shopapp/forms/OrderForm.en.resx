@@ -124,32 +124,11 @@
   <data name="customerListOrderFormComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 28</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>ОТМЕНА</value>
-  </data>
   <data name="idtextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="idtextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 26</value>
-  </data>
-  <data name="customerIdLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 20</value>
-  </data>
-  <data name="customerIdLabel.Text" xml:space="preserve">
-    <value>ИД</value>
-  </data>
-  <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="statusLabel.Text" xml:space="preserve">
-    <value>Покупатель</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Дата</value>
   </data>
   <data name="dateTimePicker.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -157,19 +136,10 @@
   <data name="dateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 26</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Товар</value>
-  </data>
   <data name="productListOrderFormComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="productListOrderFormComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 28</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Новая покупка</value>
   </data>
 </root>
