@@ -28,16 +28,27 @@ namespace shopapp
         private List<Order> OrderList;
         private Order CurrentOrder;
 
-        public MainForm()
+        private int mode;
+
+        public MainForm(int mode)
         {
             InitializeComponent();
             presenter = new ShopAppPresenter(this);
-            presenter.onStart();            
+            presenter.onStart();
+
+            this.mode = mode;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             ChangeFormLanguage(LanguageSettings.CurrentLanguage);
+
+            if (mode == 0)
+            {
+                newButton.Enabled = false;
+                editButton.Enabled = false;
+                removeButton.Enabled = false;
+            }
         }
                
 

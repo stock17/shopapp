@@ -1,4 +1,5 @@
-﻿using shopapp.localization;
+﻿using shopapp.forms;
+using shopapp.localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,17 @@ namespace shopapp
 
             LanguageSettings.CurrentLanguage = LanguageSettings.ENGLISH;
 
-            MainForm mainform = new MainForm();            
-            Application.Run(mainform);     
+            //MainForm mainform = new MainForm();            
+            LoginForm fLogin = new LoginForm();
+            if (fLogin.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MainForm(fLogin.Mode));
+            }
+            else
+            {
+                Application.Exit();
+            }
+            
             
         }
     }
