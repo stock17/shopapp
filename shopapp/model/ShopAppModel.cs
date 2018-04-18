@@ -18,7 +18,7 @@ namespace shopapp.model
 
         public ShopAppModel()
         {
-            entityHelper = FileHelper.GetInstance();
+            entityHelper = DBHelper.GetInstance();
             LoadCustomers();
             LoadProducts();
             LoadOrderProductLists();
