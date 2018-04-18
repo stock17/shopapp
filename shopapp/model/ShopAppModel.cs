@@ -14,11 +14,11 @@ namespace shopapp.model
         private List<OrderProductList> orderProductLists;
         private List<Order> orderList;
 
-        private FileHelper fileHelper;
+        private IEntityHelper entityHelper;
 
         public ShopAppModel()
         {
-            fileHelper = FileHelper.GetInstance();
+            entityHelper = FileHelper.GetInstance();
             LoadCustomers();
             LoadProducts();
             LoadOrderProductLists();
@@ -28,10 +28,10 @@ namespace shopapp.model
 
         public void SaveData()
         {
-            fileHelper.SaveCustomerToFile(customerList);
-            fileHelper.SaveProductToFile(productList);
-            fileHelper.SaveOrderProductListsToFile(orderProductLists);
-            fileHelper.SaveOrdersToFile(orderList);
+            entityHelper.SaveCustomers(customerList);
+            entityHelper.SaveProducts(productList);
+            entityHelper.SaveOrderProductLists(orderProductLists);
+            entityHelper.SaveOrders(orderList);
         }
 
         public void GenerateFakeBD() {
@@ -142,7 +142,7 @@ namespace shopapp.model
 
 
         private void LoadCustomers() {
-            customerList = fileHelper.LoadCustomerFromFile();
+            customerList = entityHelper.LoadCustomers();
             if (customerList.Count > 0)
             {
                 var MaxId = (from c in customerList select c.Id).Max();
@@ -155,7 +155,7 @@ namespace shopapp.model
         }
 
         private void LoadProducts() {
-            productList = fileHelper.LoadProductFromFile();
+            productList = entityHelper.LoadProducts();
             if (productList.Count > 0)
             {
                 var MaxId = (from p in productList select p.Id).Max();
@@ -171,7 +171,7 @@ namespace shopapp.model
 
         private void LoadOrderProductLists()
         {
-            orderProductLists = fileHelper.LoadProductListsFromFile();
+            orderProductLists = entityHelper.LoadProductLists();
 
             if (orderProductLists.Count > 0)
             {
@@ -200,7 +200,7 @@ namespace shopapp.model
 
         private void LoadOrders()
         {
-            orderList = fileHelper.LoadOrdersFromFile();
+            orderList = entityHelper.LoadOrders();
             if (orderList.Count > 0)
             {                
                 var MaxId = (from p in orderList select p.Id).Max();

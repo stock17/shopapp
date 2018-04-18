@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace shopapp.model
 {
-    class FileHelper
+    class FileHelper : IEntityHelper
     {
         private static FileHelper fileHelper;
 
@@ -28,7 +28,7 @@ namespace shopapp.model
         private const string ORDER_FILE = FILES_DIRECTORY + "/orders.json";
         private const string ORDER_PRODUCT_FILE = FILES_DIRECTORY + "/productlists.json";
 
-        public void SaveCustomerToFile(List<Customer> customers)
+        public void SaveCustomers(List<Customer> customers)
         {
             if (!Directory.Exists(FILES_DIRECTORY)) Directory.CreateDirectory(FILES_DIRECTORY);
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Customer>));
@@ -37,7 +37,7 @@ namespace shopapp.model
             stream.Close();
         }
 
-        public List<Customer> LoadCustomerFromFile()
+        public List<Customer> LoadCustomers()
         {                        
             if (File.Exists(CUSTOMER_FILE))
             {
@@ -54,7 +54,7 @@ namespace shopapp.model
             
         }
 
-        public List<Product> LoadProductFromFile()
+        public List<Product> LoadProducts()
         {
             if (File.Exists(PRODUCT_FILE))
             {
@@ -71,7 +71,7 @@ namespace shopapp.model
             
         }
 
-        public void SaveProductToFile(List<Product> products)
+        public void SaveProducts(List<Product> products)
         {
             if (!Directory.Exists(FILES_DIRECTORY)) Directory.CreateDirectory(FILES_DIRECTORY);
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Product>));
@@ -81,7 +81,7 @@ namespace shopapp.model
         }
 
 
-        public List<Order> LoadOrdersFromFile()
+        public List<Order> LoadOrders()
         {
             if (File.Exists(ORDER_FILE))
             {
@@ -99,7 +99,7 @@ namespace shopapp.model
 
         }
 
-        public void SaveOrdersToFile(List<Order> orderList)
+        public void SaveOrders(List<Order> orderList)
         {
             if (!Directory.Exists(FILES_DIRECTORY)) Directory.CreateDirectory(FILES_DIRECTORY);
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Order>));
@@ -111,7 +111,7 @@ namespace shopapp.model
 
 
 
-        public List<OrderProductList> LoadProductListsFromFile()
+        public List<OrderProductList> LoadProductLists()
         {
             if (File.Exists(ORDER_PRODUCT_FILE))
             {
@@ -129,7 +129,7 @@ namespace shopapp.model
 
         }
 
-        public void SaveOrderProductListsToFile(List<OrderProductList> orderProductLists)
+        public void SaveOrderProductLists(List<OrderProductList> orderProductLists)
         {
             if (!Directory.Exists(FILES_DIRECTORY)) Directory.CreateDirectory(FILES_DIRECTORY);
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<OrderProductList>));

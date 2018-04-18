@@ -126,6 +126,7 @@
     <Compile Include="localization\LanguageSettings.cs" />
     <Compile Include="model\FakeBD.cs" />
     <Compile Include="model\FileHelper.cs" />
+    <Compile Include="model\IEntityHelper.cs" />
     <Compile Include="model\ShopAppModel.cs" />
     <Compile Include="presenter\ShopAppPresenter.cs" />
     <Compile Include="Program.cs" />
